@@ -2,6 +2,7 @@
 .jekyll-metadata
 .env
 .DS_Store
+.idea/*
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
