@@ -110,7 +110,7 @@ module WorkForwardNola
     end
 
     post '/pdf' do
-      pdftk = PdfForms.new('/usr/local/bin/pdftk')
+      pdftk = PdfForms.new('pdftk')
 
       pdf_path = 'public/ajcc_membership.pdf'
 
