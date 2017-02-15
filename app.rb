@@ -112,7 +112,7 @@ module WorkForwardNola
     post '/pdf' do
       pdftk = PdfForms.new('/usr/local/bin/pdftk')
 
-      pdf_path = 'ajcc_membership.pdf'
+      pdf_path = 'public/ajcc_membership.pdf'
 
       form_data = {
           :Email => params[:email],
