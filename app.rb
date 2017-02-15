@@ -117,8 +117,15 @@ module WorkForwardNola
       form_data = {
           :Email => params[:email],
           :'Last name Family name  surname' => params[:last_name],
-          :'First name Given name' => params[:first_name]
+          :'First name Given name' => params[:first_name],
+          :'Primary phone' => params[:phone],
       }
+
+      if params[:services]
+        params[:services].each do |val|
+          form_data[val] = 'Yes'
+        end
+      end
 
       pdftk.fill_form pdf_path, 'myform.pdf', form_data
 
