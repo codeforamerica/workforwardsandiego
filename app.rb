@@ -3,6 +3,7 @@ require 'sinatra/sequel'
 require 'mustache'
 require 'dotenv'
 require 'pony'
+require 'pdf-forms'
 
 module WorkForwardNola
   # WFN app
@@ -101,6 +102,27 @@ module WorkForwardNola
     get '/jobsystem' do
       @title = 'Job System'
       mustache :jobsystem
+    end
+
+    get '/prepare' do
+      @title = 'Prepare'
+      mustache :prepare
+    end
+
+    post '/pdf' do
+      pdftk = PdfForms.new('/usr/local/bin/pdftk')
+
+      pdf_path = 'ajcc_membership.pdf'
+
+      form_data = {
+          :Email => params[:email],
+          :'Last name Family name  surname' => params[:last_name],
+          :'First name Given name' => params[:first_name]
+      }
+
+      pdftk.fill_form pdf_path, 'myform.pdf', form_data
+
+      send_file 'myform.pdf'
     end
 
     get '/opportunity-center-info' do

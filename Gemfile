@@ -11,6 +11,7 @@ gem 'sass', '~> 3.4'
 gem 'uglifier', '~> 3.0'
 gem 'dotenv'
 gem 'pony'
+gem 'pdf-forms'
 
 # database things
 gem 'pg'
