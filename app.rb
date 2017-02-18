@@ -57,7 +57,7 @@ module WorkForwardNola
     end
 
     get '/' do
-      @title = 'Work Forward NOLA'
+      @title = 'Work Forward San Diego'
       mustache :index
     end
 
