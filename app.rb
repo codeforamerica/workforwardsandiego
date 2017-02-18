@@ -54,6 +54,7 @@ module WorkForwardNola
       # this is convoluted, but I have to require this after setting up the DB
       require './models/trait'
       require './models/career'
+      require './models/job_app'
     end
 
     get '/' do
@@ -120,6 +121,13 @@ module WorkForwardNola
           :'First name Given name' => params[:first_name],
           :'Primary phone' => params[:phone],
       }
+
+      JobApp.create(
+          email: params[:email],
+          last_name: params[:last_name],
+          first_name: params[:first_name],
+          phone: params[:phone],
+      )
 
       if params[:services]
         params[:services].each do |val|
