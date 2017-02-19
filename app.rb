@@ -4,6 +4,7 @@ require 'mustache'
 require 'dotenv'
 require 'pony'
 require 'pdf-forms'
+require 'tempfile'
 
 module WorkForwardNola
   # WFN app
@@ -135,9 +136,11 @@ module WorkForwardNola
         end
       end
 
-      pdftk.fill_form pdf_path, 'myform.pdf', form_data
+      filename = "/tmp/#{SecureRandom.urlsafe_base64}.pdf"
 
-      send_file 'myform.pdf'
+      pdftk.fill_form pdf_path, filename, form_data
+
+      send_file filename
     end
 
     get '/opportunity-center-info' do
