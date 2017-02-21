@@ -123,7 +123,7 @@ module WorkForwardNola
           :'Primary phone' => params[:phone],
       }
 
-      JobApp.create(
+      job_app = JobApp.new(
           email: params[:email],
           last_name: params[:last_name],
           first_name: params[:first_name],
@@ -134,6 +134,8 @@ module WorkForwardNola
         params[:services].each do |val|
           form_data[val] = 'Yes'
         end
+
+        job_app.set(services: params[:services])
       end
 
       if params[:other_services]
@@ -142,10 +144,13 @@ module WorkForwardNola
         length = params[:other_services].length
         form_data['Other Please explain 1'] = params[:other_services][0..(length/2)]
         form_data['Other Please explain 2'] = params[:other_services][(length/2 + 1)..length]
+
+        job_app.set(other: params[:other_services])
       end
 
-      filename = "/tmp/#{SecureRandom.urlsafe_base64}.pdf"
+      job_app.save
 
+      filename = "/tmp/#{SecureRandom.urlsafe_base64}.pdf"
       pdftk.fill_form pdf_path, filename, form_data
 
       send_file filename
