@@ -5,27 +5,45 @@
 </section>
 
 <form method="POST" action="/pdf">
-    <p>Your First Name: <input name="last_name" type="text"></p>
-    <p>Your Last Name: <input name="first_name" type="text"></p>
-    <p>Email address: <input name="email" type="text"></p>
-    <p>Phone number: <input name="phone" type="text"></p>
+    <div class="centered">
+        <p>Your First Name: <input name="last_name" type="text"></p>
+        <p>Your Last Name: <input name="first_name" type="text"></p>
+        <p>Email address: <input name="email" type="text"></p>
+        <p>Phone number: <input name="phone" type="text"></p>
+        <br/>
 
-    <p>What services would you like?</p>
-    <input type="checkbox" name="services[]" value="Basic needs asssitance">Basic needs assistance<br>
-    <input type="checkbox" name="services[]" value="Behavioral Health">Behavioral health<br>
-    <input type="checkbox" name="services[]" value="Computer Skills">Computer skills<br>
-    <input type="checkbox" name="services[]" value="Communication Skills">Communication skills<br>
-    <input type="checkbox" name="services[]" value="Expungement">Expungement<br>
-    <input type="checkbox" name="services[]" value="Health/aging/wellness">Health/aging/wellness<br>
-    <input type="checkbox" name="services[]" value="Interview Skills">Interview skills<br>
-    <input type="checkbox" name="services[]" value="Job leads">Job leads<br>
-    <input type="checkbox" name="services[]" value="Job Market Information">Job market information<br>
-    <input type="checkbox" name="services[]" value="Job search techniques">Job search techniques<br>
-    <input type="checkbox" name="services[]" value="Layoff transition support">Layoff transition support<br>
-    <input type="checkbox" name="services[]" value="Salary negotiation skills">Salary negotiation skills<br>
-    <input type="checkbox" name="services[]" value="Support of case manager">Support of case manager<br>
-    <input type="checkbox" name="services[]" value="Veterans' resources">Veterans' resources<br>
-    <input type="checkbox" name="services[]" value="Vocational skills/training">Vocational skills/training<br>
+        <h3>How can we support you?</h3>
 
-    <p><input type="submit" value="Download Application"> Don't forget to sign pages 2 and 3!</p>
+        <p>How can we support you in your job search?</p>
+        <input type="checkbox" name="services[]" value="Job leads">Job leads<br>
+        <input type="checkbox" name="services[]" value="Job Market Information">Job market information<br>
+        <input type="checkbox" name="services[]" value="Job search techniques">Job search techniques<br>
+        <br/>
+
+        <p>Would you like to develop specific job skills?</p>
+        <input type="checkbox" name="services[]" value="Communication Skills">Communication skills<br>
+        <input type="checkbox" name="services[]" value="Computer Skills">Computer skills<br>
+        <input type="checkbox" name="services[]" value="Interview Skills">Interview skills<br>
+        <input type="checkbox" name="services[]" value="Salary negotiation skills">Salary negotiation skills<br>
+        <input type="checkbox" name="services[]" value="Vocational skills/training">Vocational skills and training<br>
+        <br/>
+
+        <p>If you have a criminal record, are you interested in clearing it?</p>
+        <input type="checkbox" name="services[]" value="Expungement">Yes<br>
+        <br/>
+
+        <p>Have you been recently laid off?</p>
+        <input type="checkbox" name="services[]" value="Layoff transition support">Yes<br>
+        <br/>
+
+        <p>Are you a veteran?</p>
+        <input type="checkbox" name="services[]" value="Veterans' resources">Yes<br>
+        <br/>
+
+        <p>Would you like the support of a case manager?</p>
+        <input type="checkbox" name="services[]" value="Support of case manager">Yes<br>
+        <br/>
+
+        <p><input type="submit" value="Download Application"> Don't forget to sign pages 2 and 3!</p>
+    </div>
 </form>
