@@ -136,6 +136,14 @@ module WorkForwardNola
         end
       end
 
+      if params[:other_services]
+        form_data['Other (Please explain)'] = 'Yes'
+
+        length = params[:other_services].length
+        form_data['Other Please explain 1'] = params[:other_services][0..(length/2)]
+        form_data['Other Please explain 2'] = params[:other_services][(length/2 + 1)..length]
+      end
+
       filename = "/tmp/#{SecureRandom.urlsafe_base64}.pdf"
 
       pdftk.fill_form pdf_path, filename, form_data
