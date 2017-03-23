@@ -84,18 +84,6 @@ module WorkForwardNola
       }.to_json
     end
 
-    post '/careers' do
-      # params hash has answers
-      @quiz_answers = params
-      @title = 'Career Results'
-      mustache :careers
-    end
-
-    get '/careers' do
-      @title = 'Career Results'
-      mustache :careers
-    end
-
     get '/assessment' do
       @title = 'Assessment'
       mustache :assessment
