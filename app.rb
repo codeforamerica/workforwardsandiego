@@ -120,8 +120,22 @@ module WorkForwardNola
           :Email => params[:email],
           :'Last name Family name  surname' => params[:last_name],
           :'First name Given name' => params[:first_name],
+          :'Gender identity' => params[:gender],
           :'Primary phone' => params[:phone],
       }
+
+      form_data[params[:selective_service]] = 'Yes'
+      form_data[params[:work_authorization]] = 'Yes'
+      form_data[params[:education]] = 'Yes'
+      form_data[params[:current_employment_status]] = 'Yes'
+      form_data[params[:unemployment_insurance]] = 'Yes'
+      form_data[params[:farm_work]] = 'Yes'
+      form_data[params[:termination_notice]] = 'Yes'
+      form_data[params[:looking_for_work]] = 'Yes'
+      form_data[params[:military_caregiver]] = 'Yes'
+      form_data[params[:military]] = 'Yes'
+      form_data[params[:military_dependent]] = 'Yes'
+      form_data[params[:current_school]] = 'Yes' if params[:current_school] != 'no'
 
       job_app = JobApp.new(
           email: params[:email],

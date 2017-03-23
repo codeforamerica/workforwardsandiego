@@ -8,9 +8,115 @@
     <div class="centered">
         <p>Your First Name: <input name="last_name" type="text"></p>
         <p>Your Last Name: <input name="first_name" type="text"></p>
+        <p>Your Gender Identity: <input name="gender" type="text"></p>
         <p>Email address: <input name="email" type="text"></p>
         <p>Phone number: <input name="phone" type="text"></p>
         <br/>
+
+        <p>Are you registered with the Selective Service?</p>
+        <select name="selective_service">
+            <option value="Yes, Registered">Yes</option>
+            <option value="No, not registered">No</option>
+            <option value="Document exemption">No, I am exempt</option>
+            <option value="Unknown">I don't know</option>
+        </select>
+
+        <p>Have you been recently laid off?</p>
+        <input type="checkbox" name="services[]" value="Layoff transition support">Yes<br>
+        <br/>
+
+        <p>Are you a veteran?</p>
+        <input type="checkbox" name="services[]" value="Veterans' resources">Yes<br>
+        <br/>
+
+        <p>Are you authorized to work in the United States?</p>
+        <select name="work_authorization">
+            <option value="Citizen of U.S. or U.S. Territory">Citizen of U.S. or U.S. Territory</option>
+            <option value="U.S. resident">U.S. resident</option>
+            <option value="Alien/refugee lawfully admitted to U.S">Alien/refugee lawfully admitted to U.S</option>
+            <option value="No Authorization">No</option>
+        </select>
+
+        <p>What level of education do you have?</p>
+        <select name="education">
+            <option value="No formal education">No formal education</option>
+            <option value="Grades 1st-6th completed">Grades 1st-6th completed</option>
+            <option value="Grades 7th-9th completed">Grades 7th-9th completed</option>
+            <option value="Some high school completed">Some high school completed</option>
+            <option value="High school diploma">High school diploma</option>
+            <option value="High school equivalency diploma">High school equivalency diploma</option>
+            <option value="College course work - no degree">College course work - no degree</option>
+            <option value="Technical course work - no degree">Technical course work - no degree</option>
+            <option value="Vocational course work - no degree">Vocational course work - no degree</option>
+            <option value="Certification">Certification</option>
+            <option value="Associates degree">Associates degree</option>
+            <option value="Bachelor's degree">Bachelor's degree</option>
+            <option value="Master's degree">Master's degree</option>
+            <option value="Doctorates degree">Doctorates degree</option>
+            <option value="Specialized degree">Specialized degree</option>
+        </select>
+
+        <p>Are you currently attending school?</p>
+        <select name="current_school">
+            <option value="yes, attending an alternative hs">Alternative High School</option>
+            <option value="yes, attending college">College</option>
+            <option value="yes, attending adult education">Adult Education</option>
+            <option value="yes, attending technical school">Technical School</option>
+            <option value="yes, attending vocational school">Vocational School</option>
+            <option value="no" selected>No</option>
+        </select>
+
+        <p>What is your current employment status?</p>
+        <select name="current_employment_status">
+            <option value="employed">Employed</option>
+            <option value="not employed">Not Employed</option>
+            <option value="employed with notice of termination">Employed with notice of termination</option>
+            <option value="employed with notice of military separation">Employed with notice of military separation
+            </option>
+        </select>
+
+        <p>Are you currently receiving Unemployment Insurance?</p>
+        <select name="unemployment_insurance">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="benefits exhausted">My benefits have exhausted</option>
+        </select>
+
+        <p>Have you performed work as a farm worker or food processor, including packing houses, nurseries, or orchards,
+            for at least 25 days within the past 12 months?</p>
+        <input type="radio" name="farm_work" value="Yes">Yes<br>
+        <input type="radio" name="farm_work" value="No" checked>No<br>
+
+        <p>Within the last 12 months, have you received a notice of termination or layoff from your job or received documentation that you are separating from military service?</p>
+        <select name="termination_notice">
+            <option value="yes, I have recently received notice of termination">Yes, I have recently received a notice of termination</option>
+            <option value="yes, i have received notice of mlitary seperation">Yes, I have received a notice of military separation</option>
+            <option value="No, I have not recently received a notice of termination or military separation" selected>No</option>
+        </select>
+
+        <p>Are you currently looking for work?</p>
+        <input type="radio" name="looking_for_work" value="yes5">Yes<br>
+        <input type="radio" name="looking_for_work" value="no5">No<br>
+
+        <h3>Military Service</h3>
+
+        <p>Are you a member or caregiver who is a spouse or family member to a member of the armed forces who is wounded, ill, or injured and receiving treatment in a military facility or warrior transition unit?</p>
+        <input type="radio" name="military_caregiver" value="yes1">Yes<br>
+        <input type="radio" name="military_caregiver" value="no1">No<br>
+
+        <p>Are you currently in the military, a veteran, or the spouse of a veteran?</p>
+        <input type="radio" name="military" value="yes2">Yes<br>
+        <input type="radio" name="military" value="no2">No<br>
+
+        <p>Are you the spouse/dependent of someone in the active-duty military service, National Guard, or Reserves who is currently activated?</p>
+        <input type="radio" name="military_dependent" value="yes4">Yes<br>
+        <input type="radio" name="military_dependent" value="no4">No<br>
+
+        <h3>Public assistance: please provide answers to the following questions if any apply within the last 6 months</h3>
+
+        <p>Has your household received Temporary Assistance for Needy Family (TANF) payments? </p>
+        <input type="radio" name="military_dependent" value="yes4">Yes<br>
+        <input type="radio" name="military_dependent" value="no4">No<br>
 
         <h3>How can we support you?</h3>
 
@@ -30,14 +136,6 @@
 
         <p>If you have a criminal record, are you interested in clearing it?</p>
         <input type="checkbox" name="services[]" value="Expungement">Yes<br>
-        <br/>
-
-        <p>Have you been recently laid off?</p>
-        <input type="checkbox" name="services[]" value="Layoff transition support">Yes<br>
-        <br/>
-
-        <p>Are you a veteran?</p>
-        <input type="checkbox" name="services[]" value="Veterans' resources">Yes<br>
         <br/>
 
         <p>Would you like the support of a case manager?</p>
