@@ -88,6 +88,17 @@
             <option value="benefits exhausted">My benefits have exhausted</option>
         </select>
 
+        <p>How many people live in your household, including yourself? <input name="household_size" type="number"></p>
+
+        <p>About how much money did you make in the last 6 months? <input name="income" type="number"></p>
+
+        <p>Tell us about your current or most recent job.</p>
+        <p>Employer: <input name="employer" type="text"></p>
+        <p>Hourly Wage: <input name="wage" type="number"></p>
+        <p>Hours Worked: <input name="hours_worked" type="text"></p>
+        <p>If you are no longer working at this job, what was the date you last worked? <input name="date_last_worked" type="text"></p>
+
+
         <p>Have you performed work as a farm worker or food processor, including packing houses, nurseries, or orchards,
             for at least 25 days within the past 12 months?</p>
         <input type="radio" name="farm_work" value="Yes">Yes<br>
@@ -102,8 +113,11 @@
         </select>
 
         <p>Are you currently looking for work?</p>
-        <input type="radio" name="looking_for_work" value="yes5">Yes<br>
-        <input type="radio" name="looking_for_work" value="no5">No<br>
+        <input type="radio" name="looking_for_work" value="are you currently looking for work: Yes">Yes<br>
+        <input type="radio" name="looking_for_work" value="are you currently looking for work: No">No<br>
+
+        <p>What is your desired job?</p>
+        <textarea name="desired_job" cols="50" rows="5" maxlength="400"></textarea>
 
         <h3>Military Service</h3>
 
@@ -112,8 +126,8 @@
         <input type="radio" name="military_caregiver" value="no1">No<br>
 
         <p>Are you currently in the military, a veteran, or the spouse of a veteran?</p>
-        <input type="radio" name="military" value="yes2">Yes<br>
-        <input type="radio" name="military" value="no2">No<br>
+        <input type="radio" name="military" value="yes3">Yes<br>
+        <input type="radio" name="military" value="no3">No<br>
 
         <p>Are you the spouse/dependent of someone in the active-duty military service, National Guard, or Reserves who is currently activated?</p>
         <input type="radio" name="military_dependent" value="yes4">Yes<br>
@@ -122,8 +136,20 @@
         <h3>Public assistance: please provide answers to the following questions if any apply within the last 6 months</h3>
 
         <p>Has your household received Temporary Assistance for Needy Family (TANF) payments? </p>
-        <input type="radio" name="military_dependent" value="yes4">Yes<br>
-        <input type="radio" name="military_dependent" value="no4">No<br>
+        <input type="radio" name="tanf" value="yes5">Yes<br>
+        <input type="radio" name="tanf" value="no5">No<br>
+
+        <p>Have you been determined eligible for or received Supplemental Nutritional Assistance Programs assistance (SNAP — formally known as food stamps)?</p>
+        <input type="radio" name="snap" value="yes6">Yes<br>
+        <input type="radio" name="snap" value="no6">No<br>
+
+        <p>Have you received General Assistance (GA) payments?</p>
+        <input type="radio" name="general_assistance" value="yes7">Yes<br>
+        <input type="radio" name="general_assistance" value="no7">No<br>
+
+        <p>Have you received Refugee Cash Assistance (RCA) payments?</p>
+        <input type="radio" name="refugee_cash_assistance" value="yes8">Yes<br>
+        <input type="radio" name="refugee_cash_assistance" value="no8">No<br>
 
         <h3>How can we support you?</h3>
 
