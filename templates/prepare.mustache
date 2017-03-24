@@ -5,26 +5,80 @@
 </section>
 
 <div class="container">
+    <br>
     <form method="POST" action="/pdf">
-        <p>First Name: <input name="last_name" type="text"></p>
-        <p>Last Name: <input name="first_name" type="text"></p>
-        <p>Your Gender Identity: <input name="gender" type="text"></p>
-        <p>Email address: <input name="email" type="text"></p>
-        <p>Phone number: <input name="phone" type="text"></p>
-        <br/>
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <div class="form-group">
+                    <label for="last_name">Last Name</label>
+                    <input class="form-control" name="last_name" type="text">
+                </div>
 
-        <p>Are you registered with the Selective Service?</p>
-        <select name="selective_service">
-            <option selected></option>
-            <option value="Yes, Registered">Yes</option>
-            <option value="No, not registered">No</option>
-            <option value="Document exemption">No, I am exempt</option>
-            <option value="Unknown">I don't know</option>
-        </select>
+                <div class="form-group">
+                    <label for="first_name">First Name</label>
+                    <input class="form-control" name="first_name" type="text">
+                </div>
 
-        <p>Have you been recently laid off?</p>
-        <input type="checkbox" name="services[]" value="Layoff transition support">Yes<br>
-        <br/>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <input class="form-control" name="gender" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input class="form-control" name="email" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input class="form-control" name="phone" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>Are you registered with the Selective Service?</label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="selective_service" value="Yes, Registered">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="selective_service" value="No, not registered">
+                            No
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="selective_service" value="Document exemption">
+                            No, I am exempt
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="selective_service" value="Unknown">
+                            I don't know
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Have you been recently laid off?</label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="services[]" value="Layoff transition support">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="services[]" value="">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <p>Are you a veteran?</p>
         <input type="checkbox" name="services[]" value="Veterans' resources">Yes<br>
