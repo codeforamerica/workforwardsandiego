@@ -4,10 +4,10 @@
     </div>
 </section>
 
-<form method="POST" action="/pdf">
-    <div class="centered">
-        <p>Your First Name: <input name="last_name" type="text"></p>
-        <p>Your Last Name: <input name="first_name" type="text"></p>
+<div class="container">
+    <form method="POST" action="/pdf">
+        <p>First Name: <input name="last_name" type="text"></p>
+        <p>Last Name: <input name="first_name" type="text"></p>
         <p>Your Gender Identity: <input name="gender" type="text"></p>
         <p>Email address: <input name="email" type="text"></p>
         <p>Phone number: <input name="phone" type="text"></p>
@@ -88,7 +88,10 @@
             <option value="benefits exhausted">My benefits have exhausted</option>
         </select>
 
-        <p>How many people live in your household, including yourself? <input name="household_size" type="number"></p>
+        <label>
+            How many people live in your household, including yourself?
+            <input name="household_size" type="number">
+        </label>
 
         <p>About how much money did you make in the last 6 months? <input name="income" type="number"></p>
 
@@ -96,7 +99,10 @@
         <p>Employer: <input name="employer" type="text"></p>
         <p>Hourly Wage: <input name="wage" type="number"></p>
         <p>Hours Worked: <input name="hours_worked" type="text"></p>
-        <p>If you are no longer working at this job, what was the date you last worked? <input name="date_last_worked" type="text"></p>
+        <label>
+            If you are no longer working at this job, what was the date you last worked?
+            <input name="date_last_worked" type="text">
+        </label>
 
 
         <p>Have you performed work as a farm worker or food processor, including packing houses, nurseries, or orchards,
@@ -104,12 +110,18 @@
         <input type="radio" name="farm_work" value="Yes">Yes<br>
         <input type="radio" name="farm_work" value="No">No<br>
 
-        <p>Within the last 12 months, have you received a notice of termination or layoff from your job or received documentation that you are separating from military service?</p>
+        <p>Within the last 12 months, have you received a notice of termination or layoff from your job or received
+            documentation that you are separating from military service?</p>
         <select name="termination_notice">
             <option selected></option>
-            <option value="yes, I have recently received notice of termination">Yes, I have recently received a notice of termination</option>
-            <option value="yes, i have received notice of mlitary seperation">Yes, I have received a notice of military separation</option>
-            <option value="No, I have not recently received a notice of termination or military separation">No</option>
+            <option value="yes, I have recently received notice of termination">Yes, I have recently received a
+                notice of termination
+            </option>
+            <option value="yes, i have received notice of mlitary seperation">Yes, I have received a notice of
+                military separation
+            </option>
+            <option value="No, I have not recently received a notice of termination or military separation">No
+            </option>
         </select>
 
         <p>Are you currently looking for work?</p>
@@ -121,7 +133,8 @@
 
         <h3>Military Service</h3>
 
-        <p>Are you a member or caregiver who is a spouse or family member to a member of the armed forces who is wounded, ill, or injured and receiving treatment in a military facility or warrior transition unit?</p>
+        <p>Are you a member or caregiver who is a spouse or family member to a member of the armed forces who is
+            wounded, ill, or injured and receiving treatment in a military facility or warrior transition unit?</p>
         <input type="radio" name="military_caregiver" value="yes1">Yes<br>
         <input type="radio" name="military_caregiver" value="no1">No<br>
 
@@ -129,17 +142,20 @@
         <input type="radio" name="military" value="yes3">Yes<br>
         <input type="radio" name="military" value="no3">No<br>
 
-        <p>Are you the spouse/dependent of someone in the active-duty military service, National Guard, or Reserves who is currently activated?</p>
+        <p>Are you the spouse/dependent of someone in the active-duty military service, National Guard, or Reserves
+            who is currently activated?</p>
         <input type="radio" name="military_dependent" value="yes4">Yes<br>
         <input type="radio" name="military_dependent" value="no4">No<br>
 
-        <h3>Public assistance: please provide answers to the following questions if any apply within the last 6 months</h3>
+        <h3>Public assistance: please provide answers to the following questions if any apply within the last 6
+            months</h3>
 
         <p>Has your household received Temporary Assistance for Needy Family (TANF) payments? </p>
         <input type="radio" name="tanf" value="yes5">Yes<br>
         <input type="radio" name="tanf" value="no5">No<br>
 
-        <p>Have you been determined eligible for or received Supplemental Nutritional Assistance Programs assistance (SNAP — formally known as food stamps)?</p>
+        <p>Have you been determined eligible for or received Supplemental Nutritional Assistance Programs assistance
+            (SNAP — formally known as food stamps)?</p>
         <input type="radio" name="snap" value="yes6">Yes<br>
         <input type="radio" name="snap" value="no6">No<br>
 
@@ -164,7 +180,8 @@
         <input type="checkbox" name="services[]" value="Computer Skills">Computer skills<br>
         <input type="checkbox" name="services[]" value="Interview Skills">Interview skills<br>
         <input type="checkbox" name="services[]" value="Salary negotiation skills">Salary negotiation skills<br>
-        <input type="checkbox" name="services[]" value="Vocational skills/training">Vocational skills and training<br>
+        <input type="checkbox" name="services[]" value="Vocational skills/training">Vocational skills and
+        training<br>
         <br/>
 
         <p>If you have a criminal record, are you interested in clearing it?</p>
@@ -179,5 +196,5 @@
         <textarea name="other_services" cols="50" rows="5" maxlength="400"></textarea>
 
         <p><input type="submit" value="Download Application"> Don't forget to sign pages 2 and 3!</p>
-    </div>
-</form>
+    </form>
+</div>
