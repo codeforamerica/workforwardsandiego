@@ -24,13 +24,6 @@ body {
   padding: 0;
 }
 
-#bodyContainer {
-  width: 100%;
-  max-width: 950px;
-  margin: 0 auto;
-}
-
-
 // Typography //
 h1, h2, h3 { color: $heading-color; }
 h1 {
@@ -142,11 +135,10 @@ hr {
 
 
 // Feedback //
-#branding {
+.header {
   font-style: italic;
   padding: .2rem 1.5rem;
   p { font-size: 90%; }
-  @media print { display: none; }
 }
 
 
