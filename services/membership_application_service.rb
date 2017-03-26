@@ -38,6 +38,10 @@ module WorkForwardNola
       form_data[@params[:refugee_cash_assistance]] = 'Yes'
       form_data[@params[:current_school]] = 'Yes' if @params[:current_school] != 'no'
 
+      if @params[:recently_laid_off] == 'true'
+        form_data['Layoff transition support'] = 'Yes'
+      end
+
       if ['employed', 'employed with notice of military separation', 'employed with notice of termination'].include? @params[:current_employment_status]
         form_data['Employer'] = @params[:employer]
         form_data['Hourly wage'] = @params[:wage]
