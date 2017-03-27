@@ -110,7 +110,9 @@
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="work_authorization" value="Alien/refugee lawfully admitted to U.S">
+                            <input type="radio"
+                                   name="work_authorization"
+                                   value="Alien/refugee lawfully admitted to U.S">
                             Alien/refugee lawfully admitted to U.S
                         </label>
                     </div>
@@ -121,64 +123,76 @@
                         </label>
                     </div>
                 </div>
+
+                <label>What level of education do you have?</label>
+                <select class="form-control" name="education">
+                    <option selected></option>
+                    <option value="No formal education">No formal education</option>
+                    <option value="Grades 1st-6th completed">Grades 1st-6th completed</option>
+                    <option value="Grades 7th-9th completed">Grades 7th-9th completed</option>
+                    <option value="Some high school completed">Some high school completed</option>
+                    <option value="High school diploma">High school diploma</option>
+                    <option value="High school equivalency diploma">High school equivalency diploma</option>
+                    <option value="College course work - no degree">College course work - no degree</option>
+                    <option value="Technical course work - no degree">Technical course work - no degree</option>
+                    <option value="Vocational course work - no degree">Vocational course work - no degree</option>
+                    <option value="Certification">Certification</option>
+                    <option value="Associates degree">Associates degree</option>
+                    <option value="Bachelor's degree">Bachelor's degree</option>
+                    <option value="Master's degree">Master's degree</option>
+                    <option value="Doctorates degree">Doctorates degree</option>
+                    <option value="Specialized degree">Specialized degree</option>
+                </select>
+
+                <br/>
+
+                <label>Are you currently attending school?</label>
+                <select class="form-control" name="current_school">
+                    <option selected></option>
+                    <option value="yes, attending an alternative hs">Alternative High School</option>
+                    <option value="yes, attending college">College</option>
+                    <option value="yes, attending adult education">Adult Education</option>
+                    <option value="yes, attending technical school">Technical School</option>
+                    <option value="yes, attending vocational school">Vocational School</option>
+                    <option value="no">No</option>
+                </select>
+
+                <br/>
+
+                <label>What is your current employment status?</label>
+                <select class="form-control" name="current_employment_status">
+                    <option selected></option>
+                    <option value="employed">Employed</option>
+                    <option value="not employed">Not Employed</option>
+                    <option value="employed with notice of termination">Employed with notice of termination</option>
+                    <option value="employed with notice of military separation">Employed with notice of military
+                        separation
+                    </option>
+                </select>
+
+                <br/>
+
+                <label>Are you currently receiving Unemployment Insurance?</label>
+                <select class="form-control" name="unemployment_insurance">
+                    <option selected></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="benefits exhausted">My benefits have exhausted</option>
+                </select>
+
+                <br/>
+
+                <div class="form-group">
+                    <label for="household_size">How many people live in your household, including yourself?</label>
+                    <input class="form-control" name="household_size" type="number">
+                </div>
+
+                <div class="form-group">
+                    <label for="income">About how much money did you make in the last 6 months?</label>
+                    <input class="form-control" name="income" type="number">
+                </div>
             </div>
         </div>
-
-        <p>What level of education do you have?</p>
-        <select name="education">
-            <option selected></option>
-            <option value="No formal education">No formal education</option>
-            <option value="Grades 1st-6th completed">Grades 1st-6th completed</option>
-            <option value="Grades 7th-9th completed">Grades 7th-9th completed</option>
-            <option value="Some high school completed">Some high school completed</option>
-            <option value="High school diploma">High school diploma</option>
-            <option value="High school equivalency diploma">High school equivalency diploma</option>
-            <option value="College course work - no degree">College course work - no degree</option>
-            <option value="Technical course work - no degree">Technical course work - no degree</option>
-            <option value="Vocational course work - no degree">Vocational course work - no degree</option>
-            <option value="Certification">Certification</option>
-            <option value="Associates degree">Associates degree</option>
-            <option value="Bachelor's degree">Bachelor's degree</option>
-            <option value="Master's degree">Master's degree</option>
-            <option value="Doctorates degree">Doctorates degree</option>
-            <option value="Specialized degree">Specialized degree</option>
-        </select>
-
-        <p>Are you currently attending school?</p>
-        <select name="current_school">
-            <option selected></option>
-            <option value="yes, attending an alternative hs">Alternative High School</option>
-            <option value="yes, attending college">College</option>
-            <option value="yes, attending adult education">Adult Education</option>
-            <option value="yes, attending technical school">Technical School</option>
-            <option value="yes, attending vocational school">Vocational School</option>
-            <option value="no">No</option>
-        </select>
-
-        <p>What is your current employment status?</p>
-        <select name="current_employment_status">
-            <option selected></option>
-            <option value="employed">Employed</option>
-            <option value="not employed">Not Employed</option>
-            <option value="employed with notice of termination">Employed with notice of termination</option>
-            <option value="employed with notice of military separation">Employed with notice of military separation
-            </option>
-        </select>
-
-        <p>Are you currently receiving Unemployment Insurance?</p>
-        <select name="unemployment_insurance">
-            <option selected></option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-            <option value="benefits exhausted">My benefits have exhausted</option>
-        </select>
-
-        <label>
-            How many people live in your household, including yourself?
-            <input name="household_size" type="number">
-        </label>
-
-        <p>About how much money did you make in the last 6 months? <input name="income" type="number"></p>
 
         <p>Tell us about your current or most recent job.</p>
         <p>Employer: <input name="employer" type="text"></p>
