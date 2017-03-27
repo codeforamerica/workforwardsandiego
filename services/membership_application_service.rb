@@ -44,6 +44,14 @@ module WorkForwardNola
 
       if @params[:veteran] == 'true'
         form_data["Veterans' resources"] = 'Yes'
+        end
+
+      if @params[:expungement] == 'true'
+        form_data['Expungement'] = 'Yes'
+        end
+
+      if @params[:case_manager] == 'true'
+        form_data['Support of case manager'] = 'Yes'
       end
 
       if ['employed', 'employed with notice of military separation', 'employed with notice of termination'].include? @params[:current_employment_status]

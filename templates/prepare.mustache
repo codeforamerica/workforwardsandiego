@@ -341,13 +341,15 @@
                 </div>
 
                 <label>If you have a criminal record, are you interested in clearing it?</label>
-                <div class="checkbox">
-                    <label><input type="checkbox" name="services[]" value="Expungement">Yes</label>
+                <div class="form-group">
+                    <label class="radio-inline"><input type="radio" name="expungement" value="true">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="expungement" value="false">No</label>
                 </div>
 
                 <label>Would you like the support of a case manager?</label>
-                <div class="checkbox">
-                    <label><input type="checkbox" name="services[]" value="Support of case manager">Yes</label>
+                <div class="form-group">
+                    <label class="radio-inline"><input type="radio" name="case_manager" value="true">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="case_manager" value="false">No</label>
                 </div>
 
                 <label>Any other way we can help?</label>
