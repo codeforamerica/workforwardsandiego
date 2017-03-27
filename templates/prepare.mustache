@@ -191,109 +191,268 @@
                     <label for="income">About how much money did you make in the last 6 months?</label>
                     <input class="form-control" name="income" type="number">
                 </div>
+
+                <hr/>
+
+                <h2>Tell us about your current or most recent job.</h2>
+
+                <div class="form-group">
+                    <label for="employer">Employer</label>
+                    <input class="form-control" name="employer" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for="wage">Hourly Wage</label>
+                    <input class="form-control" name="wage" type="number">
+                </div>
+
+                <div class="form-group">
+                    <label for="hours_worked">Hours Worked</label>
+                    <input class="form-control" name="hours_worked" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for="date_last_worked">If you are no longer working at this job,
+                        what was the date you last worked?</label>
+                    <input class="form-control" name="date_last_worked" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>Have you performed work as a farm worker or food processor,
+                        including packing houses, nurseries, or orchards,
+                        for at least 25 days within the past 12 months?</label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="farm_work" value="Yes">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="farm_work" value="No">
+                            No
+                        </label>
+                    </div>
+                </div>
+
+                <label>Within the last 12 months, have you received a notice of termination
+                    or layoff from your job or received documentation that you are separating
+                    from military service?</label>
+                <select class="form-control" name="termination_notice">
+                    <option selected></option>
+                    <option value="yes, I have recently received notice of termination">Yes,
+                        I have recently received a notice of termination
+                    </option>
+                    <option value="yes, i have received notice of mlitary seperation">Yes,
+                        I have received a notice of military separation
+                    </option>
+                    <option value="No, I have not recently received a notice of termination or military separation">No
+                    </option>
+                </select>
+
+                <br/>
+
+                <div class="form-group">
+                    <label>Are you currently looking for work?</label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="looking_for_work" value="are you currently looking for work: Yes">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="looking_for_work" value="are you currently looking for work: No">
+                            No
+                        </label>
+                    </div>
+                </div>
+
+                <label>What is your desired job?</label>
+                <textarea class="form-control" name="desired_job" cols="50" rows="5" maxlength="400"></textarea>
+
+                <h2>Military Service</h2>
+
+                <div class="form-group">
+                    <label>
+                        Are you a member or caregiver who is a spouse or family member to a member of the armed
+                        forces who is wounded, ill, or injured and receiving treatment in a military facility or
+                        warrior transition unit?
+                    </label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="military_caregiver" value="yes1">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="military_caregiver" value="no1">
+                            No
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Are you currently in the military, a veteran, or the spouse of a veteran?</label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="military" value="yes3">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="military" value="no3">
+                            No
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        Are you the spouse/dependent of someone in the active-duty military service, National Guard,
+                        or Reserves who is currently activated?
+                    </label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="military_dependant" value="yes4">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="military_dependant" value="no4">
+                            No
+                        </label>
+                    </div>
+                </div>
+
+                <h2>Public assistance: please provide answers to the following questions if any apply within the last 6
+                    months</h2>
+
+                <div class="form-group">
+                    <label>Has your household received Temporary Assistance for Needy Family (TANF) payments?</label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="tanf" value="yes5">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="tanf" value="no5">
+                            No
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        Have you been determined eligible for or received Supplemental Nutritional Assistance
+                        Programs assistance (SNAP — formally known as food stamps)?
+                    </label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="snap" value="yes6">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="snap" value="no6">
+                            No
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Have you received General Assistance (GA) payments?</label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="general_assistance" value="yes7">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="general_assistance" value="no7">
+                            No
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Have you received Refugee Cash Assistance (RCA) payments?</label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="refugee_cash_assistance" value="yes8">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="refugee_cash_assistance" value="no8">
+                            No
+                        </label>
+                    </div>
+                </div>
+
+                <h2>How can we support you?</h2>
+
+                <h3>How can we support you in your job search?</h3>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="services[]" value="Job leads">Job leads</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="services[]" value="Job Market Information">
+                        Job market information
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="services[]" value="Job search techniques">Job search techniques</label>
+                </div>
+
+                <h3>Would you like to develop specific job skills?</h3>
+
+                <div class="checkbox">
+                    <label><input type="checkbox" name="services[]" value="Communication Skills">
+                        Communication skills
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="services[]" value="Computer Skills">Computer skills</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="services[]" value="Interview Skills">Interview skills</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="services[]" value="Salary negotiation skills">
+                        Salary negotiation skills
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="services[]" value="Vocational skills/training">
+                        Vocational skills and training
+                    </label>
+                </div>
+
+                <label>If you have a criminal record, are you interested in clearing it?</label>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="services[]" value="Expungement">Yes</label>
+                </div>
+
+                <label>Would you like the support of a case manager?</label>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="services[]" value="Support of case manager">Yes</label>
+                </div>
+
+                <label>Any other way we can help?</label>
+                <textarea class="form-control" name="other_services" cols="50" rows="5" maxlength="400"></textarea>
+
+                <h2><input type="submit" value="Download Application"> Don't forget to sign pages 2 and 3!</h2>
             </div>
         </div>
 
-        <p>Tell us about your current or most recent job.</p>
-        <p>Employer: <input name="employer" type="text"></p>
-        <p>Hourly Wage: <input name="wage" type="number"></p>
-        <p>Hours Worked: <input name="hours_worked" type="text"></p>
-        <label>
-            If you are no longer working at this job, what was the date you last worked?
-            <input name="date_last_worked" type="text">
-        </label>
-
-
-        <p>Have you performed work as a farm worker or food processor, including packing houses, nurseries, or orchards,
-            for at least 25 days within the past 12 months?</p>
-        <input type="radio" name="farm_work" value="Yes">Yes<br>
-        <input type="radio" name="farm_work" value="No">No<br>
-
-        <p>Within the last 12 months, have you received a notice of termination or layoff from your job or received
-            documentation that you are separating from military service?</p>
-        <select name="termination_notice">
-            <option selected></option>
-            <option value="yes, I have recently received notice of termination">Yes, I have recently received a
-                notice of termination
-            </option>
-            <option value="yes, i have received notice of mlitary seperation">Yes, I have received a notice of
-                military separation
-            </option>
-            <option value="No, I have not recently received a notice of termination or military separation">No
-            </option>
-        </select>
-
-        <p>Are you currently looking for work?</p>
-        <input type="radio" name="looking_for_work" value="are you currently looking for work: Yes">Yes<br>
-        <input type="radio" name="looking_for_work" value="are you currently looking for work: No">No<br>
-
-        <p>What is your desired job?</p>
-        <textarea name="desired_job" cols="50" rows="5" maxlength="400"></textarea>
-
-        <h3>Military Service</h3>
-
-        <p>Are you a member or caregiver who is a spouse or family member to a member of the armed forces who is
-            wounded, ill, or injured and receiving treatment in a military facility or warrior transition unit?</p>
-        <input type="radio" name="military_caregiver" value="yes1">Yes<br>
-        <input type="radio" name="military_caregiver" value="no1">No<br>
-
-        <p>Are you currently in the military, a veteran, or the spouse of a veteran?</p>
-        <input type="radio" name="military" value="yes3">Yes<br>
-        <input type="radio" name="military" value="no3">No<br>
-
-        <p>Are you the spouse/dependent of someone in the active-duty military service, National Guard, or Reserves
-            who is currently activated?</p>
-        <input type="radio" name="military_dependent" value="yes4">Yes<br>
-        <input type="radio" name="military_dependent" value="no4">No<br>
-
-        <h3>Public assistance: please provide answers to the following questions if any apply within the last 6
-            months</h3>
-
-        <p>Has your household received Temporary Assistance for Needy Family (TANF) payments? </p>
-        <input type="radio" name="tanf" value="yes5">Yes<br>
-        <input type="radio" name="tanf" value="no5">No<br>
-
-        <p>Have you been determined eligible for or received Supplemental Nutritional Assistance Programs assistance
-            (SNAP — formally known as food stamps)?</p>
-        <input type="radio" name="snap" value="yes6">Yes<br>
-        <input type="radio" name="snap" value="no6">No<br>
-
-        <p>Have you received General Assistance (GA) payments?</p>
-        <input type="radio" name="general_assistance" value="yes7">Yes<br>
-        <input type="radio" name="general_assistance" value="no7">No<br>
-
-        <p>Have you received Refugee Cash Assistance (RCA) payments?</p>
-        <input type="radio" name="refugee_cash_assistance" value="yes8">Yes<br>
-        <input type="radio" name="refugee_cash_assistance" value="no8">No<br>
-
-        <h3>How can we support you?</h3>
-
-        <p>How can we support you in your job search?</p>
-        <input type="checkbox" name="services[]" value="Job leads">Job leads<br>
-        <input type="checkbox" name="services[]" value="Job Market Information">Job market information<br>
-        <input type="checkbox" name="services[]" value="Job search techniques">Job search techniques<br>
-        <br/>
-
-        <p>Would you like to develop specific job skills?</p>
-        <input type="checkbox" name="services[]" value="Communication Skills">Communication skills<br>
-        <input type="checkbox" name="services[]" value="Computer Skills">Computer skills<br>
-        <input type="checkbox" name="services[]" value="Interview Skills">Interview skills<br>
-        <input type="checkbox" name="services[]" value="Salary negotiation skills">Salary negotiation skills<br>
-        <input type="checkbox" name="services[]" value="Vocational skills/training">Vocational skills and
-        training<br>
-        <br/>
-
-        <p>If you have a criminal record, are you interested in clearing it?</p>
-        <input type="checkbox" name="services[]" value="Expungement">Yes<br>
-        <br/>
-
-        <p>Would you like the support of a case manager?</p>
-        <input type="checkbox" name="services[]" value="Support of case manager">Yes<br>
-        <br/>
-
-        <p>Any other way we can help?</p>
-        <textarea name="other_services" cols="50" rows="5" maxlength="400"></textarea>
-
-        <p><input type="submit" value="Download Application"> Don't forget to sign pages 2 and 3!</p>
     </form>
 </div>
