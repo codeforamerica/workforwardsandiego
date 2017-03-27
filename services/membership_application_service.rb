@@ -42,6 +42,10 @@ module WorkForwardNola
         form_data['Layoff transition support'] = 'Yes'
       end
 
+      if @params[:veteran] == 'true'
+        form_data["Veterans' resources"] = 'Yes'
+      end
+
       if ['employed', 'employed with notice of military separation', 'employed with notice of termination'].include? @params[:current_employment_status]
         form_data['Employer'] = @params[:employer]
         form_data['Hourly wage'] = @params[:wage]
