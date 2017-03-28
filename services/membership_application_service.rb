@@ -17,8 +17,8 @@ module WorkForwardNola
           gender: @params[:gender],
           phone: @params[:phone],
           selective_service: @params[:selective_service],
-          recently_laid_off: @params[:recently_laid_off],
-          veteran: @params[:veteran],
+          recently_laid_off: true?(@params[:recently_laid_off]),
+          veteran: true?(@params[:veteran]),
           work_authorization: @params[:work_authorization],
           education: @params[:education],
           current_school: @params[:current_school],
@@ -30,19 +30,19 @@ module WorkForwardNola
           wage: @params[:wage],
           hours_worked: @params[:hours_worked],
           date_last_worked: @params[:date_last_worked],
-          farm_work: @params[:farm_work],
+          farm_work: true?(@params[:farm_work]),
           termination_notice: @params[:termination_notice],
-          looking_for_work: @params[:looking_for_work],
+          looking_for_work: true?(@params[:looking_for_work]),
           desired_job: @params[:desired_job],
-          military_caregiver: @params[:military_caregiver],
-          military: @params[:military],
-          military_dependent: @params[:military_dependent],
-          tanf: @params[:tanf],
-          snap: @params[:snap],
-          general_assistance: @params[:general_assistance],
-          refugee_cash_assistance: @params[:refugee_cash_assistance],
-          expungement: @params[:expungement],
-          case_manager: @params[:case_manager],
+          military_caregiver: true?(@params[:military_caregiver]),
+          military: true?(@params[:military]),
+          military_dependent: true?(@params[:military_dependent]),
+          tanf: true?(@params[:tanf]),
+          snap: true?(@params[:snap]),
+          general_assistance: true?(@params[:general_assistance]),
+          refugee_cash_assistance: true?(@params[:refugee_cash_assistance]),
+          expungement: true?(@params[:expungement]),
+          case_manager: true?(@params[:case_manager]),
           services: @params[:services],
           other: @params[:other_services]
       )
@@ -133,6 +133,16 @@ module WorkForwardNola
       PdfForms.new('pdftk').fill_form PDF_PATH, filename, form_data
 
       filename
+    end
+
+    def true?(i)
+      if i == 'true'
+        true
+      elsif i == 'false'
+        false
+      else
+        raise "#{i} is not a boolean"
+      end
     end
   end
 end
