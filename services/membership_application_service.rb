@@ -44,11 +44,11 @@ module WorkForwardNola
 
       if @params[:veteran] == 'true'
         form_data["Veterans' resources"] = 'Yes'
-        end
+      end
 
       if @params[:expungement] == 'true'
         form_data['Expungement'] = 'Yes'
-        end
+      end
 
       if @params[:case_manager] == 'true'
         form_data['Support of case manager'] = 'Yes'
@@ -68,19 +68,19 @@ module WorkForwardNola
 
       form_data['Date'] = Date.today
 
-      job_app = JobApp.new(
+      JobApp.create(
           email: @params[:email],
           last_name: @params[:last_name],
           first_name: @params[:first_name],
-          phone: @params[:phone]
+          phone: @params[:phone],
+          services: @params[:services],
+          other: @params[:other_services]
       )
 
       if @params[:services]
         @params[:services].each do |val|
           form_data[val] = 'Yes'
         end
-
-        job_app.set(services: @params[:services])
       end
 
       if @params[:other_services]
@@ -89,11 +89,7 @@ module WorkForwardNola
         length = @params[:other_services].length
         form_data['Other Please explain 1'] = @params[:other_services][0..(length/2)]
         form_data['Other Please explain 2'] = @params[:other_services][(length/2 + 1)..length]
-
-        job_app.set(other: @params[:other_services])
       end
-
-      job_app.save
 
       filename = "/tmp/#{SecureRandom.urlsafe_base64}.pdf"
 
