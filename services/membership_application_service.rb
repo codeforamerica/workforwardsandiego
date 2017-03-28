@@ -62,7 +62,6 @@ module WorkForwardNola
           'Total income you earned within last 6 months': @params[:income],
           @params[:farm_work] => 'Yes',
           @params[:termination_notice] => 'Yes',
-          @params[:looking_for_work] => 'Yes',
           'What is your desired job': @params[:desired_job],
           @params[:military_caregiver] => 'Yes',
           @params[:military] => 'Yes',
@@ -91,6 +90,9 @@ module WorkForwardNola
         form_data['Hourly wage_2'] = @params[:wage]
         form_data['Date last worked'] = @params[:date_last_worked]
       end
+
+      form_data['are you currently looking for work: Yes'] = 'Yes' if @params[:looking_for_work] == 'true'
+      form_data['are you currently looking for work: No'] = 'Yes' if @params[:looking_for_work] == 'false'
 
       form_data['Expungement'] = 'Yes' if @params[:expungement] == 'true'
 
