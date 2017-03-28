@@ -10,49 +10,75 @@ module WorkForwardNola
     end
 
     def get_filled_form
+      JobApp.create(
+          email: @params[:email],
+          last_name: @params[:last_name],
+          first_name: @params[:first_name],
+          gender: @params[:gender],
+          phone: @params[:phone],
+          selective_service: @params[:selective_service],
+          recently_laid_off: @params[:recently_laid_off],
+          veteran: @params[:veteran],
+          work_authorization: @params[:work_authorization],
+          education: @params[:education],
+          current_school: @params[:current_school],
+          current_employment_status: @params[:current_employment_status],
+          unemployment_insurance: @params[:unemployment_insurance],
+          household_size: @params[:household_size],
+          six_month_income: @params[:income],
+          employer: @params[:employer],
+          wage: @params[:wage],
+          hours_worked: @params[:hours_worked],
+          date_last_worked: @params[:date_last_worked],
+          farm_work: @params[:farm_work],
+          termination_notice: @params[:termination_notice],
+          looking_for_work: @params[:looking_for_work],
+          desired_job: @params[:desired_job],
+          military_caregiver: @params[:military_caregiver],
+          military: @params[:military],
+          military_dependent: @params[:military_dependent],
+          tanf: @params[:tanf],
+          snap: @params[:snap],
+          general_assistance: @params[:general_assistance],
+          refugee_cash_assistance: @params[:refugee_cash_assistance],
+          expungement: @params[:expungement],
+          case_manager: @params[:case_manager],
+          services: @params[:services],
+          other: @params[:other_services]
+      )
+
       form_data = {
-          :Email => @params[:email],
-          :'Last name Family name  surname' => @params[:last_name],
-          :'First name Given name' => @params[:first_name],
-          :'Gender identity' => @params[:gender],
-          :'Primary phone' => @params[:phone],
-          :'What is your desired job' => @params[:desired_job],
-          :'Total number of individuals living in your household' => @params[:household_size],
-          :'Total income you earned within last 6 months' => @params[:income]
+          Email: @params[:email],
+          'Last name Family name  surname': @params[:last_name],
+          'First name Given name': @params[:first_name],
+          'Gender identity': @params[:gender],
+          'Primary phone': @params[:phone],
+          @params[:selective_service] => 'Yes',
+          @params[:work_authorization] => 'Yes',
+          @params[:education] => 'Yes',
+          @params[:current_employment_status] => 'Yes',
+          @params[:unemployment_insurance] => 'Yes',
+          'Total number of individuals living in your household': @params[:household_size],
+          'Total income you earned within last 6 months': @params[:income],
+          @params[:farm_work] => 'Yes',
+          @params[:termination_notice] => 'Yes',
+          @params[:looking_for_work] => 'Yes',
+          'What is your desired job': @params[:desired_job],
+          @params[:military_caregiver] => 'Yes',
+          @params[:military] => 'Yes',
+          @params[:military_dependent] => 'Yes',
+          @params[:tanf] => 'Yes',
+          @params[:snap] => 'Yes',
+          @params[:general_assistance] => 'Yes',
+          @params[:refugee_cash_assistance] => 'Yes',
+          Date: Date.today
       }
 
-      form_data[@params[:selective_service]] = 'Yes'
-      form_data[@params[:work_authorization]] = 'Yes'
-      form_data[@params[:education]] = 'Yes'
-      form_data[@params[:current_employment_status]] = 'Yes'
-      form_data[@params[:unemployment_insurance]] = 'Yes'
-      form_data[@params[:farm_work]] = 'Yes'
-      form_data[@params[:termination_notice]] = 'Yes'
-      form_data[@params[:looking_for_work]] = 'Yes'
-      form_data[@params[:military_caregiver]] = 'Yes'
-      form_data[@params[:military]] = 'Yes'
-      form_data[@params[:military_dependent]] = 'Yes'
-      form_data[@params[:tanf]] = 'Yes'
-      form_data[@params[:snap]] = 'Yes'
-      form_data[@params[:general_assistance]] = 'Yes'
-      form_data[@params[:refugee_cash_assistance]] = 'Yes'
+      form_data['Layoff transition support'] = 'Yes' if @params[:recently_laid_off] == 'true'
+
+      form_data["Veterans' resources"] = 'Yes' if @params[:veteran] == 'true'
+
       form_data[@params[:current_school]] = 'Yes' if @params[:current_school] != 'no'
-
-      if @params[:recently_laid_off] == 'true'
-        form_data['Layoff transition support'] = 'Yes'
-      end
-
-      if @params[:veteran] == 'true'
-        form_data["Veterans' resources"] = 'Yes'
-      end
-
-      if @params[:expungement] == 'true'
-        form_data['Expungement'] = 'Yes'
-      end
-
-      if @params[:case_manager] == 'true'
-        form_data['Support of case manager'] = 'Yes'
-      end
 
       if ['employed', 'employed with notice of military separation', 'employed with notice of termination'].include? @params[:current_employment_status]
         form_data['Employer'] = @params[:employer]
@@ -66,16 +92,9 @@ module WorkForwardNola
         form_data['Date last worked'] = @params[:date_last_worked]
       end
 
-      form_data['Date'] = Date.today
+      form_data['Expungement'] = 'Yes' if @params[:expungement] == 'true'
 
-      JobApp.create(
-          email: @params[:email],
-          last_name: @params[:last_name],
-          first_name: @params[:first_name],
-          phone: @params[:phone],
-          services: @params[:services],
-          other: @params[:other_services]
-      )
+      form_data['Support of case manager'] = 'Yes' if @params[:case_manager] == 'true'
 
       if @params[:services]
         @params[:services].each do |val|
