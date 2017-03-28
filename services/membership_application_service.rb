@@ -60,16 +60,8 @@ module WorkForwardNola
           @params[:unemployment_insurance] => 'Yes',
           'Total number of individuals living in your household': @params[:household_size],
           'Total income you earned within last 6 months': @params[:income],
-          @params[:farm_work] => 'Yes',
           @params[:termination_notice] => 'Yes',
           'What is your desired job': @params[:desired_job],
-          @params[:military_caregiver] => 'Yes',
-          @params[:military] => 'Yes',
-          @params[:military_dependent] => 'Yes',
-          @params[:tanf] => 'Yes',
-          @params[:snap] => 'Yes',
-          @params[:general_assistance] => 'Yes',
-          @params[:refugee_cash_assistance] => 'Yes',
           Date: Date.today
       }
 
@@ -91,8 +83,32 @@ module WorkForwardNola
         form_data['Date last worked'] = @params[:date_last_worked]
       end
 
+      form_data['Yes'] = 'Yes' if @params[:farm_work] == 'true'
+      form_data['No'] = 'Yes' if @params[:farm_work] == 'false'
+
       form_data['are you currently looking for work: Yes'] = 'Yes' if @params[:looking_for_work] == 'true'
       form_data['are you currently looking for work: No'] = 'Yes' if @params[:looking_for_work] == 'false'
+
+      form_data['yes1'] = 'Yes' if @params[:military_caregiver] == 'true'
+      form_data['no1'] = 'Yes' if @params[:military_caregiver] == 'false'
+
+      form_data['yes3'] = 'Yes' if @params[:military] == 'true'
+      form_data['no3'] = 'Yes' if @params[:military] == 'false'
+
+      form_data['yes4'] = 'Yes' if @params[:military_dependent] == 'true'
+      form_data['no4'] = 'Yes' if @params[:military_dependent] == 'false'
+
+      form_data['yes5'] = 'Yes' if @params[:tanf] == 'true'
+      form_data['no5'] = 'Yes' if @params[:tanf] == 'false'
+
+      form_data['yes6'] = 'Yes' if @params[:snap] == 'true'
+      form_data['no6'] = 'Yes' if @params[:snap] == 'false'
+
+      form_data['yes7'] = 'Yes' if @params[:general_assistance] == 'true'
+      form_data['no7'] = 'Yes' if @params[:general_assistance] == 'false'
+
+      form_data['yes8'] = 'Yes' if @params[:refugee_cash_assistance] == 'true'
+      form_data['no8'] = 'Yes' if @params[:refugee_cash_assistance] == 'false'
 
       form_data['Expungement'] = 'Yes' if @params[:expungement] == 'true'
 
