@@ -169,7 +169,12 @@
 
                 <div class="form-group">
                     <label for="income">About how much money did you make in the last 6 months?</label>
-                    <input class="form-control" name="income" type="number">
+
+                    <label class="sr-only" for="income">Income (in dollars)</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">$</div>
+                        <input class="form-control" name="income" type="number">
+                    </div>
                 </div>
 
                 <hr/>
