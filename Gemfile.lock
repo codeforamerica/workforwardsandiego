@@ -10,11 +10,6 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    mail (2.6.4)
-      mime-types (>= 1.16, < 4)
-    mime-types (3.1)
-      mime-types-data (~> 3.2015)
-    mime-types-data (3.2016.0521)
     mustache (0.99.8)
     mustache-sinatra (1.0.1)
       mustache (<= 0.99.8)
@@ -22,8 +17,6 @@ GEM
       cliver (~> 0.3.2)
       safe_shell (>= 1.0.3, < 2.0)
     pg (0.20.0)
-    pony (1.11)
-      mail (>= 2.0)
     puma (3.8.2)
     rack (1.6.5)
     rack-protection (1.5.3)
@@ -62,7 +55,6 @@ DEPENDENCIES
   mustache-sinatra (~> 1)
   pdf-forms
   pg
-  pony
   puma
   rake
   rerun

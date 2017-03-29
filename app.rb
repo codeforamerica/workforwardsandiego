@@ -2,7 +2,6 @@ require 'sinatra/base'
 require 'sinatra/sequel'
 require 'mustache'
 require 'dotenv'
-require 'pony'
 require './services/membership_application_service'
 
 module WorkForwardNola
@@ -62,37 +61,6 @@ module WorkForwardNola
       mustache :index
     end
 
-    post '/careers/update' do
-      data = JSON.parse(request.body.read)
-      begin
-        Trait.bulk_create data['traits']
-        Career.bulk_create data['careers']
-      rescue Sequel::Error => se
-        logger.error "Sequel::Error: #{se}"
-        logger.error se.backtrace.join("\n")
-        return {
-          result: 'error',
-          text: "There was an error saving the new data: #{se.to_s.split('DETAIL').first}\n" +
-                'Please make sure your data is in the correct format or contact an administrator.'
-        }.to_json
-      end
-
-      {
-        result: 'success',
-        text: "Success! #{Trait.count} traits and #{Career.count} careers were saved."
-      }.to_json
-    end
-
-    get '/assessment' do
-      @title = 'Assessment'
-      mustache :assessment
-    end
-
-    get '/jobsystem' do
-      @title = 'Job System'
-      mustache :jobsystem
-    end
-
     get '/prepare' do
       @title = 'Prepare'
       mustache :prepare
@@ -105,42 +73,6 @@ module WorkForwardNola
     get '/opportunity-center-info' do
       @title = 'Opportunity Center Information'
       mustache :opp_center_info
-    end
-
-    post '/careers/email' do
-      body = JSON.parse(request.body.read)
-
-      @career_ids = body['career_ids']
-      email_body = mustache :careers_email, layout: false
-
-      Pony.mail({
-        to: body['recipient'],
-        subject: 'Your NOLA Career Results',
-        html_body: email_body,
-        via: :smtp,
-        via_options: {
-          address:              ENV['EMAIL_SERVER'],
-          port:                 ENV['EMAIL_PORT'],
-          enable_starttls_auto: true,
-          user_name:            ENV['EMAIL_USER'],
-          password:             ENV['EMAIL_PASSWORD'],
-          authentication:       :plain, # :plain, :login, :cram_md5, no auth by default
-          domain:               ENV['EMAIL_DOMAIN'] # the HELO domain provided by the client to the server
-        }
-      })
-
-      status 200
-      body.to_json # we have to return some JSON so that the callback gets executed in JS
-    end
-
-    get '/admin' do
-      redirect to('/manage')
-    end
-
-    get '/manage' do
-      protected!
-      @title = 'Manage Content'
-      mustache :manage
     end
   end
 end
