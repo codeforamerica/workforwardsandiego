@@ -60,7 +60,7 @@ module WorkForwardNola
           job_app.current_employment_status => 'Yes',
           job_app.unemployment_insurance => 'Yes',
           'Total number of individuals living in your household': job_app.household_size,
-          'Total income you earned within last 6 months': job_app.six_month_income,
+          'Total income you earned within last 6 months': job_app.six_month_income.to_s('F'),
           job_app.termination_notice => 'Yes',
           'What is your desired job': job_app.desired_job,
           Date: Date.today
@@ -85,14 +85,14 @@ module WorkForwardNola
       end
 
       fill_boolean_field(job_app.farm_work, 'Yes', 'No')
-      fill_boolean_field(job_app.looking_for_work, 'are you currently looking for work: Yes','are you currently looking for work: No')
-      fill_boolean_field(job_app.military_caregiver, 'yes1','no1')
-      fill_boolean_field(job_app.military, 'yes3','no3')
-      fill_boolean_field(job_app.military_dependent, 'yes4','no4')
-      fill_boolean_field(job_app.tanf, 'yes5','no5')
-      fill_boolean_field(job_app.snap, 'yes6','no6')
-      fill_boolean_field(job_app.general_assistance, 'yes7','no7')
-      fill_boolean_field(job_app.refugee_cash_assistance, 'yes8','no8')
+      fill_boolean_field(job_app.looking_for_work, 'are you currently looking for work: Yes', 'are you currently looking for work: No')
+      fill_boolean_field(job_app.military_caregiver, 'yes1', 'no1')
+      fill_boolean_field(job_app.military, 'yes3', 'no3')
+      fill_boolean_field(job_app.military_dependent, 'yes4', 'no4')
+      fill_boolean_field(job_app.tanf, 'yes5', 'no5')
+      fill_boolean_field(job_app.snap, 'yes6', 'no6')
+      fill_boolean_field(job_app.general_assistance, 'yes7', 'no7')
+      fill_boolean_field(job_app.refugee_cash_assistance, 'yes8', 'no8')
 
       @form_data['Expungement'] = 'Yes' if job_app.expungement
       @form_data['Support of case manager'] = 'Yes' if job_app.case_manager
@@ -117,6 +117,8 @@ module WorkForwardNola
 
       filename
     end
+
+    private
 
     def fill_boolean_field(param, yes_key, no_key)
       unless param.nil?
