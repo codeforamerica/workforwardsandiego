@@ -1,7 +1,4 @@
-@import 'bourbon/bourbon';
-@import 'neat/neat';
 @import 'variables';
-@import 'buttons';
 @import 'manage';
 
 .clearfix {
@@ -15,7 +12,6 @@
 html { font-size: 62.5%; }
 
 body {
-  @include clearfix;
   font-family: $sans-serif;
   font-size: 1.6rem;
   text-align: left;
@@ -76,9 +72,6 @@ a:link, a:visited, a:active {
   text-decoration: none;
   border-bottom: 1px solid $heading-color-light;
 
-  &.basic-button {
-    color: $white;
-  }
   &.fa { color: $heading-color-light; }
 }
 a:hover {
@@ -191,10 +184,6 @@ hr {
     padding: 0 10px;
     margin-right: 5px;
     width: 300px;
-  }
-
-  button {
-    padding: 5px 15px;
   }
 }
 
