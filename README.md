@@ -16,11 +16,6 @@ Run `rake db:migrate` and `rake db:seed` to set up the database structure and fi
 ### Running app & deployment
 Run the app by running `bin/start`, all it does is call `rerun -p "**/*.{rb,js,scss,mustache,ru,jpg,jpeg,png}" rackup`. The site will be available at [http://localhost:9292](http://localhost:9292). If there are errors when you try to refresh to see changes, try again - you may have been faster than the app regenerated.
 
-The "Email to yourself" career assessment feature requires the `EMAIL_xxxx` config variables to be set. We use the [pony](https://github.com/benprew/pony) gem to send emails, please see their documentation for more details.
-
-## Updating content
-For details on updating content see other files under the `docs/` folder. Details on updating career info via spreadsheet specifically is in [docs/career_assessment_how_to.md](docs/career_assessment_how_to.md).
-
 ## Deploying to production
 The `ADMIN_xxxx` and `EMAIL_xxxx` config variables need to be set regardless of the deployment. `ADMIN_USER` and `ADMIN_PASSWORD` protect the `/manage` part of the site, and the `EMAIL_xxxx` variables are for the [pony](https://github.com/benprew/pony) gem. After the app is up, make sure to load the career data via [http://your_url_here/manage](http://your_url_here/manage).
 
