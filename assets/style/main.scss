@@ -175,36 +175,6 @@ hr {
   }
 }
 
-
-// Make the most of your time //
-#time {
-  ul {
-    @media (min-width: $medium-screen) {
-      li:not(:first-child) { padding: 20px 0 0 16px; }
-    }
-  }
-  li {
-    padding: 10px 0 0 16px;
-    position: relative;
-
-    &:before {
-       content: "\f046";
-       font-family: FontAwesome;
-       position: absolute;
-       left: -3px;
-       padding: 2px 0 0 0;
-
-       @media (min-width: $medium-screen) {
-         left: - 6px;
-       }
-    }
-  }
-  @media (min-width: $medium-screen) {
-    float: right;
-  }
-}
-
-
 #map_canvas {
   height: 250px;
   width: 100%;
