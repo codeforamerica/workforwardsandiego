@@ -67,8 +67,20 @@ module WorkForwardNola
       mustache :prepare
     end
 
-    post '/pdf' do
+    post '/job_apps/create' do
       job_app = JobAppBuilder.new(params).build
+
+      redirect to("caljobs/#{job_app.id}")
+    end
+
+    get '/caljobs/:id' do
+      @title = 'Create a CalJobs profile'
+      @job_app_id = params['id']
+      mustache :caljobs
+    end
+
+    get '/pdf/:id' do
+      job_app = JobApp[params[:id]]
 
       send_file MembershipApplicationService.new(job_app, params[:services]).get_filled_form
     end
