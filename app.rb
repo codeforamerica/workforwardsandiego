@@ -3,6 +3,7 @@ require 'sinatra/sequel'
 require 'mustache'
 require 'dotenv'
 require './services/membership_application_service'
+require './services/job_app_builder'
 
 module WorkForwardNola
   # WFN app
@@ -67,7 +68,9 @@ module WorkForwardNola
     end
 
     post '/pdf' do
-      send_file MembershipApplicationService.new(params).get_filled_form
+      job_app = JobAppBuilder.new(params).build
+
+      send_file MembershipApplicationService.new(job_app, params[:services]).get_filled_form
     end
 
     get '/opportunity-center-info' do
