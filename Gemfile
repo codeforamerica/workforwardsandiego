@@ -20,4 +20,5 @@ gem 'sequel-seed' # should eventually be dev-only but :shrug:
 
 group :development do
   gem 'rerun'
+  gem 'rspec'
 end
