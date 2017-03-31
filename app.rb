@@ -79,6 +79,12 @@ module WorkForwardNola
       mustache :caljobs
     end
 
+    get '/ready/:id' do
+      @title = 'All Set!'
+      @job_app_id = params['id']
+      mustache :ready
+    end
+
     get '/pdf/:id' do
       job_app = JobApp[params[:id]]
 
