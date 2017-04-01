@@ -52,8 +52,6 @@ module WorkForwardNola
       response.headers['Cache-Control'] = 'public, max-age=36000'
 
       # this is convoluted, but I have to require this after setting up the DB
-      require './models/trait'
-      require './models/career'
       require './models/job_app'
     end
 
