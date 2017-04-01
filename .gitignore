@@ -3,6 +3,7 @@
 .env
 .DS_Store
 .idea/*
+db/schema.sql
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
