@@ -67,18 +67,6 @@ ul {
   padding: 0;
 }
 li { list-style-type: none; }
-a:link, a:visited, a:active {
-  color: $heading-color-light;
-  text-decoration: none;
-  border-bottom: 1px solid $heading-color-light;
-
-  &.fa { color: $heading-color-light; }
-}
-a:hover {
-  color: $action-color;
-  border-bottom: 1px solid $action-color;
-  &.fa { color: $heading-color; }
-}
 .quote{
   font-style: italic;
   font-size: 1.4rem;
@@ -98,13 +86,6 @@ a:hover {
   color: red;
   text-align: center;
 }
-
-span.link {
-  @extend a;
-  @extend a:link;
-  cursor: pointer;
-}
-
 
 // Design Elements //
 img {
