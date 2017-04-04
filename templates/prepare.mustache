@@ -10,18 +10,13 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="form-group">
-                    <label for="last_name">Last Name</label>
-                    <input class="form-control" name="last_name" type="text">
-                </div>
-
-                <div class="form-group">
                     <label for="first_name">First Name</label>
                     <input class="form-control" name="first_name" type="text">
                 </div>
 
                 <div class="form-group">
-                    <label for="gender">Gender</label>
-                    <input class="form-control" name="gender" type="text">
+                    <label for="last_name">Last Name</label>
+                    <input class="form-control" name="last_name" type="text">
                 </div>
 
                 <div class="form-group">
@@ -32,6 +27,11 @@
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
                     <input class="form-control" name="phone" type="tel">
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <input class="form-control" name="gender" type="text">
                 </div>
 
                 <div class="form-group">
@@ -157,7 +157,7 @@
                     <option selected></option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
-                    <option value="benefits exhausted">My benefits have exhausted</option>
+                    <option value="benefits exhausted">My benefits have ended</option>
                 </select>
 
                 <br/>
@@ -177,9 +177,11 @@
                     </div>
                 </div>
 
+                <br/>
                 <hr/>
+                <br/>
 
-                <h2>Tell us about your current or most recent job.</h2>
+                <h2>Tell us about your most recent job.</h2>
 
                 <div class="form-group">
                     <label for="employer">Employer</label>
@@ -237,6 +239,10 @@
                 <label>What is your desired job?</label>
                 <textarea class="form-control" name="desired_job" cols="50" rows="5" maxlength="400"></textarea>
 
+                <br/>
+                <hr/>
+                <br/>
+
                 <h2>Military Service</h2>
 
                 <label>
@@ -264,8 +270,13 @@
                     <label class="radio-inline"><input type="radio" name="military_dependent" value=0>No</label>
                 </div>
 
-                <h2>Public assistance: please provide answers to the following questions if any apply within the last 6
-                    months</h2>
+                <br/>
+                <hr/>
+                <br/>
+
+                <h2>Public assistance</h2>
+                <h3>Please provide answers to the following questions if any apply within the last six
+                    months.</h3>
 
                 <label>Has your household received Temporary Assistance for Needy Family (TANF) payments?</label>
                 <div class="form-group">
@@ -299,6 +310,10 @@
                         No
                     </label>
                 </div>
+
+                <br/>
+                <hr/>
+                <br/>
 
                 <h2>How can we support you?</h2>
 
@@ -353,6 +368,10 @@
 
                 <label>Any other way we can help?</label>
                 <textarea class="form-control" name="other_services" cols="50" rows="5" maxlength="400"></textarea>
+
+                <br/>
+                <hr/>
+                <br/>
 
                 <input type="submit" class="btn btn-success btn-lg" value="Next">
             </div>
