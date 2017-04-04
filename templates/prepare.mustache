@@ -153,14 +153,13 @@
                 <br/>
 
                 <label>Are you currently receiving Unemployment Insurance?</label>
-                <select class="form-control" name="unemployment_insurance">
-                    <option selected></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                    <option value="benefits exhausted">My benefits have ended</option>
-                </select>
-
-                <br/>
+                <div class="form-group">
+                    <label class="radio-inline"><input type="radio" name="unemployment_insurance"
+                                                       value="yes">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="unemployment_insurance" value="no">No</label>
+                    <label class="radio-inline"><input type="radio" name="unemployment_insurance"
+                                                       value="benefits exhausted">My benefits have ended</label>
+                </div>
 
                 <div class="form-group">
                     <label for="household_size">How many people live in your household, including yourself?</label>
