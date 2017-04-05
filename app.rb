@@ -79,5 +79,12 @@ module WorkForwardNola
 
       send_file MembershipApplicationService.new(job_app, params[:services]).get_filled_form
     end
+
+    get '/intake/:id' do
+      @job_app = JobApp[params[:id]]
+      @title = 'Intake Form'
+
+      erb :intake
+    end
   end
 end

@@ -26,5 +26,12 @@ describe 'preparation materials', type: :feature do
     expect(page).to have_content "You're all set!"
 
     click_link 'Download application'
+
+    id = current_path.split('/').last
+
+    visit "/intake/#{id}"
+
+    expect(page).to have_content 'Orientation Customer Intake Assessment'
+    expect(page).to have_content 'Customer Name: Sandie Go'
   end
 end
