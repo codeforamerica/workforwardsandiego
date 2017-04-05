@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{ title }}</title>
+    <title><%= @title %></title>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300,600,900'
           rel='stylesheet'
           type='text/css'>
@@ -46,7 +46,7 @@
                                            target="_blank">San Diego Workforce Partnership</a>. It was developed in
         partnership with <a href="http://codeforamerica.org/">Code for America</a>.</p>
 </div>
-{{{ yield }}}
+<%= yield %>
 <footer role="contentinfo">
     <div class="logos clearfix">
         <a href="http://www.workforce.org/"

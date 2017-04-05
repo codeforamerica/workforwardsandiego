@@ -1,6 +1,5 @@
 require 'sinatra/base'
 require 'sinatra/sequel'
-require 'mustache'
 require 'dotenv'
 require './services/membership_application_service'
 require './services/job_app_builder'
@@ -25,15 +24,7 @@ module WorkForwardNola
       Sequel::Migrator.check_current(database, 'db/migrations')
     end
 
-    register Mustache::Sinatra
-    require './views/layout'
-
     dir = File.dirname(File.expand_path(__FILE__))
-
-    set :mustache,
-        namespace: WorkForwardNola,
-        templates: "#{dir}/templates",
-        views: "#{dir}/views"
 
     helpers do
       def protected!
@@ -57,12 +48,12 @@ module WorkForwardNola
 
     get '/' do
       @title = 'Work Forward San Diego'
-      mustache :index
+      erb :index
     end
 
     get '/prepare' do
       @title = 'Prepare'
-      mustache :prepare
+      erb :prepare
     end
 
     post '/job_apps/create' do
@@ -74,24 +65,19 @@ module WorkForwardNola
     get '/caljobs/:id' do
       @title = 'Create a CalJobs profile'
       @job_app_id = params['id']
-      mustache :caljobs
+      erb :caljobs
     end
 
     get '/ready/:id' do
       @title = 'All Set!'
       @job_app_id = params['id']
-      mustache :ready
+      erb :ready
     end
 
     get '/pdf/:id' do
       job_app = JobApp[params[:id]]
 
       send_file MembershipApplicationService.new(job_app, params[:services]).get_filled_form
-    end
-
-    get '/opportunity-center-info' do
-      @title = 'Opportunity Center Information'
-      mustache :opp_center_info
     end
   end
 end

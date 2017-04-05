@@ -14,7 +14,7 @@ Make sure [Postgres is installed](https://devcenter.heroku.com/articles/heroku-p
 Run `rake db:migrate` and `rake db:seed` to set up the database structure and fill it with sample data. If the data doesn't show up, try running `rake db:reset` and `rake db:seed`. Career data can also be loaded via [http://localhost:9292/manage](http://localhost:9292/manage). and a spreadsheet.
 
 ### Running app & deployment
-Run the app by running `bin/start`, all it does is call `rerun -p "**/*.{rb,js,scss,mustache,ru,jpg,jpeg,png}" rackup`. The site will be available at [http://localhost:9292](http://localhost:9292). If there are errors when you try to refresh to see changes, try again - you may have been faster than the app regenerated.
+Run the app by running `bin/start`, all it does is call `rerun -p "**/*.{rb,js,scss,ru,jpg,jpeg,png}" rackup`. The site will be available at [http://localhost:9292](http://localhost:9292). If there are errors when you try to refresh to see changes, try again - you may have been faster than the app regenerated.
 
 ## Deploying to production
 The `ADMIN_xxxx` and `EMAIL_xxxx` config variables need to be set regardless of the deployment. `ADMIN_USER` and `ADMIN_PASSWORD` protect the `/manage` part of the site, and the `EMAIL_xxxx` variables are for the [pony](https://github.com/benprew/pony) gem. After the app is up, make sure to load the career data via [http://your_url_here/manage](http://your_url_here/manage).
