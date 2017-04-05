@@ -21,3 +21,8 @@ group :development do
   gem 'rerun'
   gem 'rspec'
 end
+
+group :test do
+  gem 'capybara'
+  gem 'launchy'
+end
