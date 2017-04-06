@@ -3,6 +3,7 @@ require 'capybara/rspec'
 require './app'
 
 Capybara.app = WorkForwardNola::App
+WorkForwardNola::App.show_exceptions = false
 
 describe 'preparation materials', type: :feature do
   it 'should show inputted information' do
