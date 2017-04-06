@@ -17,6 +17,9 @@ describe 'preparation materials', type: :feature do
 
     fill_in 'First Name', with: 'Sandie'
     fill_in 'Last Name', with: 'Go'
+    fill_in 'Phone Number', with: '555-555-5555'
+    select 'Not Employed', from: 'What is your current employment status?'
+    fill_in 'If you are no longer working at this job, what was the date you last worked?', with: '1/2/2013'
 
     click_button 'Next'
 
@@ -34,5 +37,8 @@ describe 'preparation materials', type: :feature do
 
     expect(page).to have_content 'Orientation Customer Intake Assessment'
     expect(page).to have_content 'Customer Name: Sandie Go'
+    expect(page).to have_content "Customer's phone: 555-555-5555"
+    expect(page).to have_content 'Employment Status: not employed'
+    expect(page).to have_content 'Date Last Worked: 1/2/2013'
   end
 end

@@ -2,17 +2,30 @@
   <div class="row">
     <div class="col-md-6">
       <p>Customer Name: <%= "#{@job_app.first_name} #{@job_app.last_name}" %></p>
-      <p>Date: </p>
+      <p>Date: _______________</p>
     </div>
     <div class="col-md-6">
-      <p>Customer's phone:</p>
-      <p>Career Agent:</p>
+      <p>Customer's phone: <%= @job_app.phone %></p>
+      <p>Career Agent: _______________</p>
     </div>
   </div>
 
+  <h3>Orientation Customer Intake Assessment (Missed Intake)</h3>
+  <h4>A. Background Information</h4>
+
+  <p>
+    Have you previously received services from a Career Center or are you currently with
+    any other career center?
+  </p>
+
   <div class="row">
-    <h3>Orientation Customer Intake Assessment (Missed Intake)</h3>
-    <h4>A. Background Information</h4>
+    <div class="col-md-2">No</div>
+    <div class="col-md-2">Yes</div>
+    <div class="col-md-8">If yes, which one and how long ago? _____________</div>
   </div>
+
+  <p>Employment Status: <%= @job_app.current_employment_status %></p>
+
+  <p>Date Last Worked: <%= @job_app.date_last_worked %></p>
 
 </div>
