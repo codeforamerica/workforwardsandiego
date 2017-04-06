@@ -1,380 +1,346 @@
 <section id="prepare">
-    <div class="centered">
-        <h2>Prepare for a visit to a Career Center</h2>
-    </div>
+  <div class="centered">
+    <h2>Prepare for a visit to a Career Center</h2>
+  </div>
 </section>
 
 <div class="container">
-    <br>
-    <form method="POST" action="/job_apps/create">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="form-group">
-                    <label for="first_name">First Name</label>
-                    <input class="form-control" name="first_name" id="first_name" type="text">
-                </div>
-
-                <div class="form-group">
-                    <label for="last_name">Last Name</label>
-                    <input class="form-control" name="last_name" id="last_name" type="text">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input class="form-control" name="email" type="email">
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input class="form-control" name="phone" id="phone" type="tel">
-                </div>
-
-                <div class="form-group">
-                    <label for="gender">Gender</label>
-                    <input class="form-control" name="gender" type="text">
-                </div>
-
-                <div class="form-group">
-                    <label>Are you registered with the Selective Service?</label>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="selective_service" value="Yes, Registered">
-                            Yes
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="selective_service" value="No, not registered">
-                            No
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="selective_service" value="Document exemption">
-                            No, I am exempt
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="selective_service" value="Unknown">
-                            I don't know
-                        </label>
-                    </div>
-                </div>
-
-                <label>Have you been recently laid off?</label>
-                <div class="form-group">
-                    <label class="radio-inline"><input type="radio" name="recently_laid_off" value=1>Yes</label>
-                    <label class="radio-inline"><input type="radio" name="recently_laid_off" value=0>No</label>
-                </div>
-
-                <label>Are you a veteran?</label>
-                <div class="form-group">
-                    <label class="radio-inline"><input type="radio" name="veteran" value=1>Yes</label>
-                    <label class="radio-inline"><input type="radio" name="veteran" value=0>No</label>
-                </div>
-
-                <div class="form-group">
-                    <label>Are you authorized to work in the United States?</label>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="work_authorization" value="Citizen of U.S. or U.S. Territory">
-                            Citizen of U.S. or U.S. Territory
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="work_authorization" value="U.S. resident">
-                            U.S. resident
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio"
-                                   name="work_authorization"
-                                   value="Alien/refugee lawfully admitted to U.S">
-                            Alien/refugee lawfully admitted to U.S
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="work_authorization" value="No Authorization">
-                            No
-                        </label>
-                    </div>
-                </div>
-
-                <label>What level of education do you have?</label>
-                <select class="form-control" name="education">
-                    <option selected></option>
-                    <option value="No formal education">No formal education</option>
-                    <option value="Grades 1st-6th completed">Grades 1st-6th completed</option>
-                    <option value="Grades 7th-9th completed">Grades 7th-9th completed</option>
-                    <option value="Some high school completed">Some high school completed</option>
-                    <option value="High school diploma">High school diploma</option>
-                    <option value="High school equivalency diploma">High school equivalency diploma</option>
-                    <option value="College course work - no degree">College course work - no degree</option>
-                    <option value="Technical course work - no degree">Technical course work - no degree</option>
-                    <option value="Vocational course work - no degree">Vocational course work - no degree</option>
-                    <option value="Certification">Certification</option>
-                    <option value="Associates degree">Associates degree</option>
-                    <option value="Bachelor's degree">Bachelor's degree</option>
-                    <option value="Master's degree">Master's degree</option>
-                    <option value="Doctorates degree">Doctorates degree</option>
-                    <option value="Specialized degree">Specialized degree</option>
-                </select>
-
-                <br/>
-
-                <label>Are you currently attending school?</label>
-                <select class="form-control" name="current_school">
-                    <option selected></option>
-                    <option value="yes, attending an alternative hs">Alternative High School</option>
-                    <option value="yes, attending college">College</option>
-                    <option value="yes, attending adult education">Adult Education</option>
-                    <option value="yes, attending technical school">Technical School</option>
-                    <option value="yes, attending vocational school">Vocational School</option>
-                    <option value="">No</option>
-                </select>
-
-                <br/>
-
-                <label for="current_employment_status">What is your current employment status?</label>
-                <select class="form-control" name="current_employment_status" id="current_employment_status">
-                    <option selected></option>
-                    <option value="employed">Employed</option>
-                    <option value="not employed">Not Employed</option>
-                    <option value="employed with notice of termination">Employed with notice of termination</option>
-                    <option value="employed with notice of military separation">Employed with notice of military
-                        separation
-                    </option>
-                </select>
-
-                <br/>
-
-                <label>Are you currently receiving Unemployment Insurance?</label>
-                <div class="form-group">
-                    <label class="radio-inline"><input type="radio" name="unemployment_insurance"
-                                                       value="yes">Yes</label>
-                    <label class="radio-inline"><input type="radio" name="unemployment_insurance" value="no">No</label>
-                    <label class="radio-inline"><input type="radio" name="unemployment_insurance"
-                                                       value="benefits exhausted">My benefits have ended</label>
-                </div>
-
-                <div class="form-group">
-                    <label for="household_size">How many people live in your household, including yourself?</label>
-                    <input class="form-control" name="household_size" type="number">
-                </div>
-
-                <div class="form-group">
-                    <label for="income">About how much money did you make in the last 6 months?</label>
-
-                    <label class="sr-only" for="income">Income (in dollars)</label>
-                    <div class="input-group">
-                        <div class="input-group-addon">$</div>
-                        <input class="form-control" name="income" type="number">
-                    </div>
-                </div>
-
-                <br/>
-                <hr/>
-                <br/>
-
-                <h2>Tell us about your most recent job.</h2>
-
-                <div class="form-group">
-                    <label for="employer">Employer</label>
-                    <input class="form-control" name="employer" type="text">
-                </div>
-
-                <div class="form-group">
-                    <label for="wage">Hourly Wage</label>
-                    <input class="form-control" name="wage" type="0.01">
-                </div>
-
-                <div class="form-group">
-                    <label for="hours_worked">Hours Worked</label>
-                    <input class="form-control" name="hours_worked" type="text">
-                </div>
-
-                <div class="form-group">
-                    <label for="date_last_worked">If you are no longer working at this job,
-                        what was the date you last worked?</label>
-                    <input class="form-control" name="date_last_worked" id="date_last_worked" type="date">
-                </div>
-
-                <label>
-                    Have you performed work as a farm worker or food processor, including packing houses, nurseries,
-                    or orchards, for at least 25 days within the past 12 months?
-                </label>
-                <div class="form-group">
-                    <label class="radio-inline"><input type="radio" name="farm_work" value=1>Yes</label>
-                    <label class="radio-inline"><input type="radio" name="farm_work" value=0>No</label>
-                </div>
-
-                <label>Within the last 12 months, have you received a notice of termination
-                    or layoff from your job or received documentation that you are separating
-                    from military service?</label>
-                <select class="form-control" name="termination_notice">
-                    <option selected></option>
-                    <option value="yes, I have recently received notice of termination">Yes,
-                        I have recently received a notice of termination
-                    </option>
-                    <option value="yes, i have received notice of mlitary seperation">Yes,
-                        I have received a notice of military separation
-                    </option>
-                    <option value="No, I have not recently received a notice of termination or military separation">No
-                    </option>
-                </select>
-
-                <br/>
-
-                <label>Are you currently looking for work?</label>
-                <div class="form-group">
-                    <label class="radio-inline"><input type="radio" name="looking_for_work" value=1>Yes</label>
-                    <label class="radio-inline"><input type="radio" name="looking_for_work" value=0>No</label>
-                </div>
-
-                <label>What is your desired job?</label>
-                <textarea class="form-control" name="desired_job" cols="50" rows="5" maxlength="400"></textarea>
-
-                <br/>
-                <hr/>
-                <br/>
-
-                <h2>Military Service</h2>
-
-                <label>
-                    Are you a member or caregiver who is a spouse or family member to a member of the armed
-                    forces who is wounded, ill, or injured and receiving treatment in a military facility or
-                    warrior transition unit?
-                </label>
-                <div class="form-group">
-                    <label class="radio-inline"><input type="radio" name="military_caregiver" value=1>Yes</label>
-                    <label class="radio-inline"><input type="radio" name="military_caregiver" value=0>No</label>
-                </div>
-
-                <label>Are you currently in the military, a veteran, or the spouse of a veteran?</label>
-                <div class="form-group">
-                    <label class="radio-inline"><input type="radio" name="military" value=1>Yes</label>
-                    <label class="radio-inline"><input type="radio" name="military" value=0>No</label>
-                </div>
-
-                <label>
-                    Are you the spouse/dependent of someone in the active-duty military service, National Guard,
-                    or Reserves who is currently activated?
-                </label>
-                <div class="form-group">
-                    <label class="radio-inline"><input type="radio" name="military_dependent" value=1>Yes</label>
-                    <label class="radio-inline"><input type="radio" name="military_dependent" value=0>No</label>
-                </div>
-
-                <br/>
-                <hr/>
-                <br/>
-
-                <h2>Public assistance</h2>
-                <h3>Please provide answers to the following questions if any apply within the last six
-                    months.</h3>
-
-                <label>Has your household received Temporary Assistance for Needy Family (TANF) payments?</label>
-                <div class="form-group">
-                    <label class="radio-inline"><input type="radio" name="tanf" value=1>Yes</label>
-                    <label class="radio-inline"><input type="radio" name="tanf" value=0>No</label>
-                </div>
-
-                <label>
-                    Have you been determined eligible for or received Supplemental Nutritional Assistance
-                    Programs assistance (SNAP — formally known as food stamps)?
-                </label>
-                <div class="form-group">
-                    <label class="radio-inline"><input type="radio" name="snap" value=1>Yes</label>
-                    <label class="radio-inline"><input type="radio" name="snap" value=0>No</label>
-                </div>
-
-                <label>Have you received General Assistance (GA) payments?</label>
-                <div class="form-group">
-                    <label class="radio-inline"><input type="radio" name="general_assistance" value=1>Yes</label>
-                    <label class="radio-inline"><input type="radio" name="general_assistance" value=0>No</label>
-                </div>
-
-                <label>Have you received Refugee Cash Assistance (RCA) payments?</label>
-                <div class="form-group">
-                    <label class="radio-inline">
-                        <input type="radio" name="refugee_cash_assistance" value=1>
-                        Yes
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="refugee_cash_assistance" value=0>
-                        No
-                    </label>
-                </div>
-
-                <br/>
-                <hr/>
-                <br/>
-
-                <h2>How can we support you?</h2>
-
-                <h3>How can we support you in your job search?</h3>
-                <div class="checkbox">
-                    <label><input type="checkbox" name="services[]" value="Job leads">Job leads</label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" name="services[]" value="Job Market Information">
-                        Job market information
-                    </label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" name="services[]" value="Job search techniques">Job search techniques</label>
-                </div>
-
-                <h3>Would you like to develop specific job skills?</h3>
-
-                <div class="checkbox">
-                    <label><input type="checkbox" name="services[]" value="Communication Skills">
-                        Communication skills
-                    </label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" name="services[]" value="Computer Skills">Computer skills</label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" name="services[]" value="Interview Skills">Interview skills</label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" name="services[]" value="Salary negotiation skills">
-                        Salary negotiation skills
-                    </label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" name="services[]" value="Vocational skills/training">
-                        Vocational skills and training
-                    </label>
-                </div>
-
-                <label>If you have a criminal record, are you interested in clearing it?</label>
-                <div class="form-group">
-                    <label class="radio-inline"><input type="radio" name="expungement" value=1>Yes</label>
-                    <label class="radio-inline"><input type="radio" name="expungement" value=0>No</label>
-                </div>
-
-                <label>Would you like the support of a case manager?</label>
-                <div class="form-group">
-                    <label class="radio-inline"><input type="radio" name="case_manager" value=1>Yes</label>
-                    <label class="radio-inline"><input type="radio" name="case_manager" value=0>No</label>
-                </div>
-
-                <label>Any other way we can help?</label>
-                <textarea class="form-control" name="other_services" cols="50" rows="5" maxlength="400"></textarea>
-
-                <br/>
-                <hr/>
-                <br/>
-
-                <input type="submit" class="btn btn-success btn-lg" value="Next">
-            </div>
+  <br>
+  <form method="POST" action="/job_apps/create">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="form-group">
+          <label for="first_name">First Name</label>
+          <input class="form-control" name="first_name" id="first_name" type="text">
         </div>
 
-    </form>
+        <div class="form-group">
+          <label for="last_name">Last Name</label>
+          <input class="form-control" name="last_name" id="last_name" type="text">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input class="form-control" name="email" type="email">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input class="form-control" name="phone" id="phone" type="tel">
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <input class="form-control" name="gender" type="text">
+        </div>
+
+        <div class="form-group">
+          <label>Are you registered with the Selective Service?</label>
+          <div class="radio">
+            <label><input type="radio" name="selective_service" value="Yes, Registered">Yes</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="selective_service" value="No, not registered">No</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="selective_service" value="Document exemption">No, I am exempt</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="selective_service" value="Unknown">I don't know</label>
+          </div>
+        </div>
+
+        <label>Have you been recently laid off?</label>
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" name="recently_laid_off" value=1>Yes</label>
+          <label class="radio-inline"><input type="radio" name="recently_laid_off" value=0>No</label>
+        </div>
+
+        <label>Are you a veteran?</label>
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" name="veteran" value=1>Yes</label>
+          <label class="radio-inline"><input type="radio" name="veteran" value=0>No</label>
+        </div>
+
+        <div class="form-group">
+          <label>Are you authorized to work in the United States?</label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="work_authorization" value="Citizen of U.S. or U.S. Territory">
+              Citizen of U.S. or U.S. Territory
+            </label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="work_authorization" value="U.S. resident">U.S. resident</label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="work_authorization" value="Alien/refugee lawfully admitted to U.S">
+              Alien/refugee lawfully admitted to U.S
+            </label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="work_authorization" value="No Authorization">No</label>
+          </div>
+        </div>
+
+        <label>What level of education do you have?</label>
+        <select class="form-control" name="education">
+          <option selected></option>
+          <option value="No formal education">No formal education</option>
+          <option value="Grades 1st-6th completed">Grades 1st-6th completed</option>
+          <option value="Grades 7th-9th completed">Grades 7th-9th completed</option>
+          <option value="Some high school completed">Some high school completed</option>
+          <option value="High school diploma">High school diploma</option>
+          <option value="High school equivalency diploma">High school equivalency diploma</option>
+          <option value="College course work - no degree">College course work - no degree</option>
+          <option value="Technical course work - no degree">Technical course work - no degree</option>
+          <option value="Vocational course work - no degree">Vocational course work - no degree</option>
+          <option value="Certification">Certification</option>
+          <option value="Associates degree">Associates degree</option>
+          <option value="Bachelor's degree">Bachelor's degree</option>
+          <option value="Master's degree">Master's degree</option>
+          <option value="Doctorates degree">Doctorates degree</option>
+          <option value="Specialized degree">Specialized degree</option>
+        </select>
+
+        <br/>
+
+        <label>Are you currently attending school?</label>
+        <select class="form-control" name="current_school">
+          <option selected></option>
+          <option value="yes, attending an alternative hs">Alternative High School</option>
+          <option value="yes, attending college">College</option>
+          <option value="yes, attending adult education">Adult Education</option>
+          <option value="yes, attending technical school">Technical School</option>
+          <option value="yes, attending vocational school">Vocational School</option>
+          <option value="">No</option>
+        </select>
+
+        <br/>
+
+        <label for="current_employment_status">What is your current employment status?</label>
+        <select class="form-control" name="current_employment_status" id="current_employment_status">
+          <option selected></option>
+          <option value="employed">Employed</option>
+          <option value="not employed">Not Employed</option>
+          <option value="employed with notice of termination">Employed with notice of termination</option>
+          <option value="employed with notice of military separation">
+            Employed with notice of military separation
+          </option>
+        </select>
+
+        <br/>
+
+        <label>Are you currently receiving Unemployment Insurance?</label>
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" name="unemployment_insurance" value="yes">Yes</label>
+          <label class="radio-inline"><input type="radio" name="unemployment_insurance" value="no">No</label>
+          <label class="radio-inline"><input type="radio" name="unemployment_insurance"
+                                             value="benefits exhausted">My benefits have ended</label>
+        </div>
+
+        <div class="form-group">
+          <label for="household_size">How many people live in your household, including yourself?</label>
+          <input class="form-control" name="household_size" type="number">
+        </div>
+
+        <div class="form-group">
+          <label for="income">About how much money did you make in the last 6 months?</label>
+
+          <label class="sr-only" for="income">Income (in dollars)</label>
+          <div class="input-group">
+            <div class="input-group-addon">$</div>
+            <input class="form-control" name="income" type="number">
+          </div>
+        </div>
+
+        <br/>
+        <hr/>
+        <br/>
+
+        <h2>Tell us about your most recent job.</h2>
+
+        <div class="form-group">
+          <label for="employer">Employer</label>
+          <input class="form-control" name="employer" type="text">
+        </div>
+
+        <div class="form-group">
+          <label for="wage">Hourly Wage</label>
+          <input class="form-control" name="wage" type="0.01">
+        </div>
+
+        <div class="form-group">
+          <label for="hours_worked">Hours Worked</label>
+          <input class="form-control" name="hours_worked" type="text">
+        </div>
+
+        <div class="form-group">
+          <label for="date_last_worked">If you are no longer working at this job, what was the date you last
+            worked?</label>
+          <input class="form-control" name="date_last_worked" id="date_last_worked" type="date">
+        </div>
+
+        <label>
+          Have you performed work as a farm worker or food processor, including packing houses, nurseries,
+          or orchards, for at least 25 days within the past 12 months?
+        </label>
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" name="farm_work" value=1>Yes</label>
+          <label class="radio-inline"><input type="radio" name="farm_work" value=0>No</label>
+        </div>
+
+        <label>Within the last 12 months, have you received a notice of termination or layoff from your job or received
+          documentation that you are separating from military service?</label>
+        <select class="form-control" name="termination_notice">
+          <option selected></option>
+          <option value="yes, I have recently received notice of termination">
+            Yes, I have recently received a notice of termination
+          </option>
+          <option value="yes, i have received notice of mlitary seperation">
+            Yes, I have received a notice of military separation
+          </option>
+          <option value="No, I have not recently received a notice of termination or military separation">No</option>
+        </select>
+
+        <br/>
+
+        <label>Are you currently looking for work?</label>
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" name="looking_for_work" value=1>Yes</label>
+          <label class="radio-inline"><input type="radio" name="looking_for_work" value=0>No</label>
+        </div>
+
+        <label>What is your desired job?</label>
+        <textarea class="form-control" name="desired_job" cols="50" rows="5" maxlength="400"></textarea>
+
+        <br/>
+        <hr/>
+        <br/>
+
+        <h2>Military Service</h2>
+
+        <label>
+          Are you a member or caregiver who is a spouse or family member to a member of the armed forces who is wounded,
+          ill, or injured and receiving treatment in a military facility or warrior transition unit?
+        </label>
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" name="military_caregiver" value=1>Yes</label>
+          <label class="radio-inline"><input type="radio" name="military_caregiver" value=0>No</label>
+        </div>
+
+        <label>Are you currently in the military, a veteran, or the spouse of a veteran?</label>
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" name="military" value=1>Yes</label>
+          <label class="radio-inline"><input type="radio" name="military" value=0>No</label>
+        </div>
+
+        <label>
+          Are you the spouse/dependent of someone in the active-duty military service, National Guard, or Reserves who
+          is currently activated?
+        </label>
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" name="military_dependent" value=1>Yes</label>
+          <label class="radio-inline"><input type="radio" name="military_dependent" value=0>No</label>
+        </div>
+
+        <br/>
+        <hr/>
+        <br/>
+
+        <h2>Public assistance</h2>
+        <h3>Please provide answers to the following questions if any apply within the last six months.</h3>
+
+        <label>Has your household received Temporary Assistance for Needy Family (TANF) payments?</label>
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" name="tanf" value=1>Yes</label>
+          <label class="radio-inline"><input type="radio" name="tanf" value=0>No</label>
+        </div>
+
+        <label>
+          Have you been determined eligible for or received Supplemental Nutritional Assistance
+          Programs assistance (SNAP — formally known as food stamps)?
+        </label>
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" name="snap" value=1>Yes</label>
+          <label class="radio-inline"><input type="radio" name="snap" value=0>No</label>
+        </div>
+
+        <label>Have you received General Assistance (GA) payments?</label>
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" name="general_assistance" value=1>Yes</label>
+          <label class="radio-inline"><input type="radio" name="general_assistance" value=0>No</label>
+        </div>
+
+        <label>Have you received Refugee Cash Assistance (RCA) payments?</label>
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" name="refugee_cash_assistance" value=1>Yes</label>
+          <label class="radio-inline"><input type="radio" name="refugee_cash_assistance" value=0>No</label>
+        </div>
+
+        <br/>
+        <hr/>
+        <br/>
+
+        <h2>How can we support you?</h2>
+
+        <h3>How can we support you in your job search?</h3>
+        <div class="checkbox">
+          <label><input type="checkbox" name="services[]" value="Job leads">Job leads</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="services[]" value="Job Market Information">
+            Job market information
+          </label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="services[]" value="Job search techniques">Job search techniques</label>
+        </div>
+
+        <h3>Would you like to develop specific job skills?</h3>
+
+        <div class="checkbox">
+          <label><input type="checkbox" name="services[]" value="Communication Skills">Communication skills</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="services[]" value="Computer Skills">Computer skills</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="services[]" value="Interview Skills">Interview skills</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="services[]" value="Salary negotiation skills">
+            Salary negotiation skills
+          </label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="services[]" value="Vocational skills/training">
+            Vocational skills and training
+          </label>
+        </div>
+
+        <label>If you have a criminal record, are you interested in clearing it?</label>
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" name="expungement" value=1>Yes</label>
+          <label class="radio-inline"><input type="radio" name="expungement" value=0>No</label>
+        </div>
+
+        <label>Would you like the support of a case manager?</label>
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" name="case_manager" value=1>Yes</label>
+          <label class="radio-inline"><input type="radio" name="case_manager" value=0>No</label>
+        </div>
+
+        <label>Any other way we can help?</label>
+        <textarea class="form-control" name="other_services" cols="50" rows="5" maxlength="400"></textarea>
+
+        <br/>
+        <hr/>
+        <br/>
+
+        <input type="submit" class="btn btn-success btn-lg" value="Next">
+      </div>
+    </div>
+  </form>
 </div>
