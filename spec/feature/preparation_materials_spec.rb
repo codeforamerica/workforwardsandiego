@@ -25,6 +25,8 @@ describe 'preparation materials', type: :feature do
     choose 'tanf_yes'
     choose 'snap_yes'
     choose 'general_assistance_no'
+    select "Bachelor's degree", from: 'What level of education do you have?'
+    fill_in 'Employer', with: 'Ballast Point'
 
     click_button 'Next'
 
@@ -48,5 +50,7 @@ describe 'preparation materials', type: :feature do
     expect(page).to have_content 'Receiving Unemployment Insurance? yes'
     expect(page).to have_content 'Are you a veteran? no'
     expect(page).to have_content 'Public assistance: TANF SNAP'
+    expect(page).to have_content "Highest education level: Bachelor's degree"
+    expect(page).to have_content 'Most recent employer: Ballast Point'
   end
 end

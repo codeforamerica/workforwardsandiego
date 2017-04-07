@@ -33,4 +33,7 @@
   <% @public_assistance.each do |service| %>
       <p><%= service %></p>
   <% end %>
+
+  <p>Highest education level: <%= @job_app.education %></p>
+  <p>Most recent employer: <%= @job_app.employer %></p>
 </div>
