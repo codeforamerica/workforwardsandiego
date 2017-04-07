@@ -20,6 +20,11 @@ describe 'preparation materials', type: :feature do
     fill_in 'Phone Number', with: '555-555-5555'
     select 'Not Employed', from: 'What is your current employment status?'
     fill_in 'If you are no longer working at this job, what was the date you last worked?', with: '1/2/2013'
+    choose 'unemployment_insurance_yes'
+    choose 'veteran_no'
+    choose 'tanf_yes'
+    choose 'snap_yes'
+    choose 'general_assistance_no'
 
     click_button 'Next'
 
@@ -40,5 +45,8 @@ describe 'preparation materials', type: :feature do
     expect(page).to have_content "Customer's phone: 555-555-5555"
     expect(page).to have_content 'Employment Status: not employed'
     expect(page).to have_content 'Date Last Worked: 1/2/2013'
+    expect(page).to have_content 'Receiving Unemployment Insurance? yes'
+    expect(page).to have_content 'Are you a veteran? no'
+    expect(page).to have_content 'Public assistance: TANF SNAP'
   end
 end

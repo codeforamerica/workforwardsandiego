@@ -80,9 +80,19 @@ module WorkForwardNola
       send_file MembershipApplicationService.new(job_app, params[:services]).get_filled_form
     end
 
+    def public_assistance(job_app)
+      [].tap do |public_assistance|
+        public_assistance.push('TANF') if job_app.tanf
+        public_assistance.push('SNAP') if job_app.snap
+        public_assistance.push('GA') if job_app.general_assistance
+        public_assistance.push('RCA') if job_app.refugee_cash_assistance
+      end
+    end
+
     get '/intake/:id' do
       @job_app = JobApp[params[:id]]
       @title = 'Intake Form'
+      @public_assistance = public_assistance(@job_app)
 
       erb :intake
     end

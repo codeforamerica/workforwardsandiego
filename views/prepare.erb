@@ -58,8 +58,8 @@
 
         <label>Are you a veteran?</label>
         <div class="form-group">
-          <label class="radio-inline"><input type="radio" name="veteran" value=1>Yes</label>
-          <label class="radio-inline"><input type="radio" name="veteran" value=0>No</label>
+          <label class="radio-inline"><input type="radio" id="veteran_yes" name="veteran" value=1>Yes</label>
+          <label class="radio-inline"><input type="radio" id="veteran_no" name="veteran" value=0>No</label>
         </div>
 
         <div class="form-group">
@@ -134,7 +134,11 @@
 
         <label>Are you currently receiving Unemployment Insurance?</label>
         <div class="form-group">
-          <label class="radio-inline"><input type="radio" name="unemployment_insurance" value="yes">Yes</label>
+          <label class="radio-inline">
+            <input type="radio"
+                   id="unemployment_insurance_yes"
+                   name="unemployment_insurance"
+                   value="yes">Yes</label>
           <label class="radio-inline"><input type="radio" name="unemployment_insurance" value="no">No</label>
           <label class="radio-inline"><input type="radio" name="unemployment_insurance"
                                              value="benefits exhausted">My benefits have ended</label>
@@ -256,8 +260,8 @@
 
         <label>Has your household received Temporary Assistance for Needy Family (TANF) payments?</label>
         <div class="form-group">
-          <label class="radio-inline"><input type="radio" name="tanf" value=1>Yes</label>
-          <label class="radio-inline"><input type="radio" name="tanf" value=0>No</label>
+          <label class="radio-inline"><input type="radio" id="tanf_yes" name="tanf" value=1>Yes</label>
+          <label class="radio-inline"><input type="radio" id="tanf_no" name="tanf" value=0>No</label>
         </div>
 
         <label>
@@ -265,14 +269,14 @@
           Programs assistance (SNAP — formally known as food stamps)?
         </label>
         <div class="form-group">
-          <label class="radio-inline"><input type="radio" name="snap" value=1>Yes</label>
-          <label class="radio-inline"><input type="radio" name="snap" value=0>No</label>
+          <label class="radio-inline"><input type="radio" id="snap_yes" name="snap" value=1>Yes</label>
+          <label class="radio-inline"><input type="radio" id="snap_no" name="snap" value=0>No</label>
         </div>
 
         <label>Have you received General Assistance (GA) payments?</label>
         <div class="form-group">
-          <label class="radio-inline"><input type="radio" name="general_assistance" value=1>Yes</label>
-          <label class="radio-inline"><input type="radio" name="general_assistance" value=0>No</label>
+          <label class="radio-inline"><input type="radio" id="general_assistance_yes" name="general_assistance" value=1>Yes</label>
+          <label class="radio-inline"><input type="radio" id="general_assistance_no" name="general_assistance" value=0>No</label>
         </div>
 
         <label>Have you received Refugee Cash Assistance (RCA) payments?</label>

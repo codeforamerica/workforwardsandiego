@@ -25,7 +25,12 @@
   </div>
 
   <p>Employment Status: <%= @job_app.current_employment_status %></p>
-
   <p>Date Last Worked: <%= @job_app.date_last_worked %></p>
+  <p>Receiving Unemployment Insurance? <%= @job_app.unemployment_insurance %></p>
+  <p>Are you a veteran? <%= @job_app.yes_no(@job_app.veteran) %></p>
 
+  <p>Public assistance:</p>
+  <% @public_assistance.each do |service| %>
+      <p><%= service %></p>
+  <% end %>
 </div>
