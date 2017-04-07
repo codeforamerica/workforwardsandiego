@@ -25,7 +25,7 @@ describe 'preparation materials', type: :feature do
     choose 'tanf_yes'
     choose 'snap_yes'
     choose 'general_assistance_no'
-    select "Bachelor's degree", from: 'What level of education do you have?'
+    select "Bachelor's degree", from: 'What is your highest level of education?'
     fill_in 'Employer', with: 'Ballast Point'
 
     click_button 'Next'
