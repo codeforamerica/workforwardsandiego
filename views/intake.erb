@@ -16,14 +16,27 @@
     any other career center?
   </p>
 
-  <div class="row">
-    <div class="col-md-2">No</div>
-    <div class="col-md-2">Yes</div>
-    <div class="col-md-8">If yes, which one and how long ago? _____________</div>
-  </div>
+  <ul class="list-inline">
+    <li>No</li>
+    <li>Yes</li>
+    <li>If yes, which one and how long ago? _____________</li>
+  </ul>
 
-  <p>Employment Status: <%= @job_app.current_employment_status %></p>
-  <p>Date Last Worked: <%= @job_app.date_last_worked %></p>
+  <div class="row">
+    <div class="col-md-6">
+      <p>Employment Status:</p>
+    </div>
+    <div class="col-md-6">
+      <p><strong><%= @job_app.current_employment_status %></strong></p>
+    </div>
+    <div class="col-md-6">
+      <p>Date Last Worked:</p>
+    </div>
+    <div class="col-md-6">
+      <p><strong><%= @job_app.date_last_worked %></strong></p>
+    </div>
+  </div>
+  <p> <%= @job_app.date_last_worked %></p>
   <p>Receiving Unemployment Insurance? <%= @job_app.unemployment_insurance %></p>
   <p>Are you a veteran? <%= @job_app.yes_no(@job_app.veteran) %></p>
 
