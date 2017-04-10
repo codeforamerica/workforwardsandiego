@@ -1,14 +1,12 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-6">
-      <p>Customer Name: <%= "#{@job_app.first_name} #{@job_app.last_name}" %></p>
-      <p>Date: _______________</p>
-    </div>
-    <div class="col-md-6">
-      <p>Customer's phone: <%= @job_app.phone %></p>
-      <p>Career Agent: _______________</p>
-    </div>
-  </div>
+  <p>
+    Customer Name: <%= "#{@job_app.first_name} #{@job_app.last_name}" %>
+    <span class="pull-right">Customer's phone: <%= @job_app.phone %></span>
+  </p>
+  <p>
+    Date: _______________
+    <span class="pull-right">Career Agent: _______________</span>
+  </p>
 
   <h3>Orientation Customer Intake Assessment</h3>
   <h4>A. Background Information</h4>
@@ -39,4 +37,72 @@
   <p>Most recent job title: ____________________ </p>
   <p>What type of work are you looking for? <%= @job_app.desired_job %> </p>
   <p>Do you have required skills/certificates/licenses to do the work? ______________________________________ </p>
+
+  <div class="row">
+    <div class="col-md-8">
+      <p>Do you have a professional resume (not CalJOBS?)</p>
+    </div>
+    <div class="col-md-4">
+      <p>
+        <label class="checkbox-inline">
+          <input type="checkbox">No
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox">Yes
+        </label>
+      </p>
+    </div>
+  </div>
+
+  <p>What AJCC services will you use?</p>
+  <ul class="list-inline">
+    <li>___ Workshops</li>
+    <li>___ Resource Room</li>
+    <li>___ Recruitments/Job Fairs</li>
+    <li>___ Staff Assisted Services</li>
+    <li>___ Partner Service</li>
+    <li>___ Social Media</li>
+    <li>Other: _________________________________</li>
+  </ul>
+
+  <h4>B. Barrier(s) Information</h4>
+  <% @barriers.each do |barrier| %>
+      <label class="checkbox-inline">
+        <input type="checkbox"><%= barrier %>
+      </label>
+  <% end %>
+
+  <h4>C. Eligibility Certifiction Process</h4>
+  <ul>
+    <li>
+      Is the customer seeking job seeking/placement opportunities?
+      <label class="checkbox-inline">
+        <input type="checkbox">No
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox">Yes
+      </label>
+    </li>
+    <li>
+      Is the customer seeking training program options?
+      <label class="checkbox-inline">
+        <input type="checkbox">No
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox">Yes
+      </label>
+    </li>
+    <li>
+      Would you recommend the customer for eligibility certification at this time?
+      <label class="checkbox-inline">
+        <input type="checkbox">No
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox">Yes
+      </label>
+      Reason(s): _____________________________________
+    </li>
+  </ul>
+
+  <h4>Quick Assessment Summary: _____________________________________________</h4>
 </div>

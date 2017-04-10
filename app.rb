@@ -93,6 +93,19 @@ module WorkForwardNola
       @job_app = JobApp[params[:id]]
       @title = 'Intake Form'
       @public_assistance = public_assistance(@job_app)
+      @barriers = [
+          'Housing/Homeless',
+          'Criminal Records',
+          'Transportation',
+          'Health Issues',
+          'Disability',
+          'ESL',
+          'Financial Difficulties',
+          'Poor Work History',
+          'Daycare Issues',
+          'Computer Skills',
+          'Other ________________________'
+      ]
 
       erb :intake
     end
