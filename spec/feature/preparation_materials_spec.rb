@@ -46,13 +46,13 @@ describe 'preparation materials', type: :feature do
     expect(page).to have_content 'Orientation Customer Intake Assessment'
     expect(page).to have_content 'Customer Name: Sandie Go'
     expect(page).to have_content "Customer's phone: 555-555-5555"
-    expect(page).to have_content 'Employment Status: not employed'
-    expect(page).to have_content 'Date Last Worked: 1/2/2013'
-    expect(page).to have_content 'Receiving Unemployment Insurance? yes'
+    expect(page).to have_content 'Employment status not employed'
+    expect(page).to have_content 'Date last worked 1/2/2013'
+    expect(page).to have_content 'Receiving unemployment insurance? yes'
     expect(page).to have_content 'Are you a veteran? no'
-    expect(page).to have_content 'Public assistance: TANF SNAP'
-    expect(page).to have_content "Highest education level: Bachelor's degree"
-    expect(page).to have_content 'Most recent employer: Ballast Point'
+    expect(page).to have_content 'Public assistance TANF SNAP'
+    expect(page).to have_content "Highest education level Bachelor's degree"
+    expect(page).to have_content 'Most recent employer Ballast Point'
     expect(page).to have_content 'What type of work are you looking for? Food Service'
   end
 end
