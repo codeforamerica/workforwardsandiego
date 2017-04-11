@@ -11,6 +11,7 @@ gem 'uglifier', '~> 3.0'
 gem 'dotenv'
 gem 'pdf-forms'
 gem 'pdfkit'
+gem 'wkhtmltopdf-heroku'
 
 # database things
 gem 'pg'

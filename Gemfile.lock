@@ -78,6 +78,7 @@ GEM
     tilt (2.0.7)
     uglifier (3.1.9)
       execjs (>= 0.3.0, < 3)
+    wkhtmltopdf-heroku (2.12.4.0)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -102,6 +103,7 @@ DEPENDENCIES
   sinatra-sequel
   sprockets (~> 3.6)
   uglifier (~> 3.0)
+  wkhtmltopdf-heroku
 
 RUBY VERSION
    ruby 2.2.5p319
