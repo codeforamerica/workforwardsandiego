@@ -9,7 +9,7 @@ describe WorkForwardNola::IntakeFormService do
 
     it 'returns a pdf of the intake form' do
       expect(PDFKit).to receive(:new)
-                            .with('http://host:1234/intake/some_id', dpi: 250, viewport_size: '1700x2200')
+                            .with('http://host:1234/intake/some_id', dpi: anything, viewport_size: anything)
                             .and_return(kit)
 
       expect(kit).to receive(:to_file).with('/tmp/random_filename.pdf')
