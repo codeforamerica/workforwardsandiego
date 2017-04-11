@@ -1,16 +1,4 @@
 @import 'variables';
-@import 'manage';
-
-.clearfix {
-  overflow: auto;
-  zoom: 1;
-  clear: both;
-}
-
-.centered {
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-}
 
 .header {
   font-style: italic;
@@ -36,7 +24,6 @@ footer {
       img { height: 70px; }
     }
   }
-  .centered { padding: .5rem 1.5rem; }
   p { margin-bottom: .5em; }
   @media print { display: none; }
 }
