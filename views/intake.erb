@@ -53,11 +53,11 @@
 
   <form class="form-horizontal">
     <div class="form-group">
-      <label class="col-sm-4 control-label">
+      <label class="col-sm-5 control-label">
         Have you previously received services from a Career Center or are you currently with
         any other career center?
       </label>
-      <div class="col-sm-8">
+      <div class="col-sm-7">
         <label class="checkbox-inline">
           <input type="checkbox"> No
         </label>
@@ -71,70 +71,70 @@
     </div>
     <br/>
     <div class="form-group">
-      <label class="col-sm-4 control-label">Employment status</label>
-      <div class="col-sm-8">
+      <label class="col-sm-5 control-label">Employment status</label>
+      <div class="col-sm-7">
         <p class="form-control-static"><%= @job_app.current_employment_status %></p>
       </div>
     </div>
     <div class="form-group">
-      <label class="col-sm-4 control-label">Date last worked</label>
-      <div class="col-sm-8">
+      <label class="col-sm-5 control-label">Date last worked</label>
+      <div class="col-sm-7">
         <p class="form-control-static"><%= @job_app.date_last_worked %></p>
       </div>
     </div>
     <div class="form-group">
-      <label class="col-sm-4 control-label">Receiving unemployment insurance?</label>
-      <div class="col-sm-8">
+      <label class="col-sm-5 control-label">Receiving unemployment insurance?</label>
+      <div class="col-sm-7">
         <p class="form-control-static"><%= @job_app.unemployment_insurance %></p>
       </div>
     </div>
     <div class="form-group">
-      <label class="col-sm-4 control-label">Are you a veteran?</label>
-      <div class="col-sm-8">
+      <label class="col-sm-5 control-label">Are you a veteran?</label>
+      <div class="col-sm-7">
         <p class="form-control-static"><%= @job_app.yes_no(@job_app.veteran) %></p>
       </div>
     </div>
     <div class="form-group">
-      <label class="col-sm-4 control-label">Public assistance</label>
-      <div class="col-sm-8">
+      <label class="col-sm-5 control-label">Public assistance</label>
+      <div class="col-sm-7">
         <% @public_assistance.each do |service| %>
             <p class="form-control-static"><%= service %></p>
         <% end %>
       </div>
     </div>
     <div class="form-group">
-      <label class="col-sm-4 control-label">Highest education level</label>
-      <div class="col-sm-8">
+      <label class="col-sm-5 control-label">Highest education level</label>
+      <div class="col-sm-7">
         <p class="form-control-static"><%= @job_app.education %></p>
       </div>
     </div>
     <div class="form-group">
-      <label class="col-sm-4 control-label">Most recent employer</label>
-      <div class="col-sm-8">
+      <label class="col-sm-5 control-label">Most recent employer</label>
+      <div class="col-sm-7">
         <p class="form-control-static"><%= @job_app.employer %></p>
       </div>
     </div>
     <div class="form-group">
-      <label class="col-sm-4 control-label">Most recent job title</label>
-      <div class="col-sm-8">
+      <label class="col-sm-5 control-label">Most recent job title</label>
+      <div class="col-sm-7">
         <p class="form-control-static"></p>
       </div>
     </div>
     <div class="form-group">
-      <label class="col-sm-4 control-label">What type of work are you looking for?</label>
-      <div class="col-sm-8">
+      <label class="col-sm-5 control-label">What type of work are you looking for?</label>
+      <div class="col-sm-7">
         <p class="form-control-static"><%= @job_app.desired_job %></p>
       </div>
     </div>
     <div class="form-group">
-      <label class="col-sm-4 control-label">Do you have required skills/certificates/licenses to do the work?</label>
-      <div class="col-sm-8">
+      <label class="col-sm-5 control-label">Do you have required skills/certificates/licenses to do the work?</label>
+      <div class="col-sm-7">
         <p class="form-control-static"></p>
       </div>
     </div>
     <div class="form-group">
-      <label class="col-sm-4 control-label">Do you have a professional resume (not CalJOBS?)</label>
-      <div class="col-sm-8">
+      <label class="col-sm-5 control-label">Do you have a professional resume (not CalJOBS?)</label>
+      <div class="col-sm-7">
         <label class="checkbox-inline">
           <input type="checkbox">No
         </label>
@@ -144,17 +144,29 @@
       </div>
     </div>
     <div class="form-group">
-      <label class="col-sm-4 control-label">What AJCC services will you use?</label>
-      <div class="col-sm-8">
-        <ul class="list-inline">
-          <li>___ Workshops</li>
-          <li>___ Resource Room</li>
-          <li>___ Recruitments/Job Fairs</li>
-          <li>___ Staff Assisted Services</li>
-          <li>___ Partner Service</li>
-          <li>___ Social Media</li>
-          <li>Other: _________________________________</li>
-        </ul>
+      <label class="col-sm-5 control-label">What AJCC services will you use?</label>
+      <div class="col-sm-7">
+        <label class="checkbox-inline">
+          <input type="checkbox">Workshops
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox">Resource Room
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox">Recruitments/Job Fairs
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox">Staff Assisted Services
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox">Partner Service
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox">Social Media
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox">Other: _________________________________
+        </label>
       </div>
     </div>
   </form>
@@ -173,8 +185,8 @@
 
   <form class="form-horizontal">
     <div class="form-group">
-      <label class="col-sm-4 control-label">Is the customer seeking job seeking/placement opportunities?</label>
-      <div class="col-sm-8">
+      <label class="col-sm-5 control-label">Is the customer seeking job seeking/placement opportunities?</label>
+      <div class="col-sm-7">
         <label class="checkbox-inline">
           <input type="checkbox">No
         </label>
@@ -184,8 +196,8 @@
       </div>
     </div>
     <div class="form-group">
-      <label class="col-sm-4 control-label">Is the customer seeking training program options?</label>
-      <div class="col-sm-8">
+      <label class="col-sm-5 control-label">Is the customer seeking training program options?</label>
+      <div class="col-sm-7">
         <label class="checkbox-inline">
           <input type="checkbox">No
         </label>
@@ -195,10 +207,10 @@
       </div>
     </div>
     <div class="form-group">
-      <label class="col-sm-4 control-label">
+      <label class="col-sm-5 control-label">
         Would you recommend the customer for eligibility certification at this time?
       </label>
-      <div class="col-sm-8">
+      <div class="col-sm-7">
         <label class="checkbox-inline">
           <input type="checkbox">No
         </label>
