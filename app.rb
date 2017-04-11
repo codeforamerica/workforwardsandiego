@@ -86,7 +86,7 @@ module WorkForwardNola
         public_assistance.push('SNAP') if job_app.snap
         public_assistance.push('GA') if job_app.general_assistance
         public_assistance.push('RCA') if job_app.refugee_cash_assistance
-      end
+      end.join(', ')
     end
 
     get '/intake/:id' do
