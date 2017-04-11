@@ -9,7 +9,7 @@ module WorkForwardNola
       intake_url = "http://#{@host}/intake/#{@job_app_id}"
 
       "/tmp/#{SecureRandom.urlsafe_base64}.pdf".tap do |filename|
-        PDFKit.new(intake_url, dpi: 250, viewport_size: '1700x2200').to_file(filename)
+        PDFKit.new(intake_url, dpi: 200, viewport_size: '1700x2200').to_file(filename)
       end
     end
   end
