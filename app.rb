@@ -107,7 +107,7 @@ module WorkForwardNola
           'Other ________________________'
       ]
 
-      erb :intake
+      erb :intake, layout: false
     end
   end
 end
