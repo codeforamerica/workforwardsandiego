@@ -1,7 +1,7 @@
 require 'sinatra/base'
 require 'sinatra/sequel'
 require 'dotenv'
-require './services/membership_application_service'
+require './services/preparation_materials_service'
 require './services/job_app_builder'
 
 module WorkForwardNola
@@ -77,7 +77,7 @@ module WorkForwardNola
     get '/pdf/:id' do
       job_app = JobApp[params[:id]]
 
-      send_file MembershipApplicationService.new(job_app, params[:services]).get_filled_form
+      send_file PreparationMaterialsService.new(job_app, params[:services], request.host_with_port).run
     end
 
     def public_assistance(job_app)

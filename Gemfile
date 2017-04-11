@@ -10,6 +10,7 @@ gem 'sass', '~> 3.4'
 gem 'uglifier', '~> 3.0'
 gem 'dotenv'
 gem 'pdf-forms'
+gem 'pdfkit'
 
 # database things
 gem 'pg'
