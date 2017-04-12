@@ -33,13 +33,13 @@ module WorkForwardNola
 
       if ['employed', 'employed with notice of military separation', 'employed with notice of termination'].include?(@job_app.current_employment_status)
         @form_data['Employer'] = @job_app.employer
-        @form_data['Hourly wage'] = @job_app.wage.to_s('F')
-        @form_data['Hours worked'] = @job_app.hours_worked.to_s('F')
+        @form_data['Hourly wage'] = @job_app.wage.to_s('F') if @job_app.wage
+        @form_data['Hours worked'] = @job_app.hours_worked.to_s('F') if @job_app.hours_worked
       end
 
       if @job_app.current_employment_status == 'not employed'
         @form_data['Last employer'] = @job_app.employer
-        @form_data['Hourly wage_2'] = @job_app.wage.to_s('F')
+        @form_data['Hourly wage_2'] = @job_app.wage.to_s('F') if @job_app.wage
         @form_data['Date last worked'] = @job_app.date_last_worked
       end
 
