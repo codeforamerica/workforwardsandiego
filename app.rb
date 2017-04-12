@@ -59,24 +59,6 @@ module WorkForwardNola
     post '/job_apps/create' do
       job_app = JobAppBuilder.new(params).build
 
-      redirect to("caljobs/#{job_app.id}")
-    end
-
-    get '/caljobs/:id' do
-      @title = 'Create a CalJobs profile'
-      @job_app_id = params['id']
-      erb :caljobs
-    end
-
-    get '/ready/:id' do
-      @title = 'All Set!'
-      @job_app_id = params['id']
-      erb :ready
-    end
-
-    get '/pdf/:id' do
-      job_app = JobApp[params[:id]]
-
       send_file PreparationMaterialsService.new(job_app, params[:services], request.host_with_port).run
     end
 

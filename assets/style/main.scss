@@ -31,3 +31,7 @@ footer {
   p { margin-bottom: .5em; }
   @media print { display: none; }
 }
+
+.hidden {
+  display: none;
+}
